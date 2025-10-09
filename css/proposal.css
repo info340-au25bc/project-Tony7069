@@ -4,6 +4,10 @@ h1 {
     text-align: center;
     color: blue;
 }
+ul {
+    display: inline-block;
+    text-align: left;
+}
 h3 {
     text-align: center;
     text-decoration: solid;
