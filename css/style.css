@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+} 
+
+html, body { /* do not remove the body, homepage layout needs it !!! */
+    height: 100%;
+}
+
+/* LOGIN PAGE SECTION: */
+.login-signup {
+  font-family: 'Georgia', sans-serif;
+  background-color: #c2b9b9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  
+}
+
+.input-container-content {
+  background-color: #e8e6E6;
+  width: 100%;
+  padding: 1.5em 2em;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);S
+}
+
+.input-container-content h2 {
+  margin: 1.25em;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 1em 1.5em;
+  margin-bottom: 1em;
+  border: none;
+  border-radius: 10px;
+  background-color: #d1c7c7;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #333;
+}
+
+.login-page-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  margin-top: 0.5em;
+}
+
+.login-page-buttons button {
+  flex: 1;
+  padding: 0.5em;
+  border: none;
+  border-radius: 10px;
+  background-color: #9c9c94;
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* HOMEPAGE SECTION: */
+.homepage {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.homepage-head-container {
+    display: flex;
+    width: 100%;
+    padding: 1em;
+    background-color: #6c6c6c;
+    align-items: center;
+}
+
+.homepage-head-container h1 {
+    font-size: 1.5rem;
+    flex: 1;
+}
+
+.homepage-nav-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.homepage-nav-buttons button {
+    border: none;
+    padding: 1em;
+    margin: 0.5em;
+    font-size: 1rem;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    font-size: 1em;
+    padding: 1em;
+    border: none;
+    border-radius: 15px;
+}
+
+.homepage-content {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.scroll-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+}
+
+.scroll-row > div {
+    width: 30%;
+    height: 90%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 1%;
+    margin-right: 1%;
+    border: none;
+    border-radius: 15px;
+    
+}
+
+.scroll-box-green { /* placeholder, delelte this later! */
+    background-color: #7e8c79;
+}
+.scroll-box-gray { /* placeholder, delete this later! */
+    background-color: #bebebe;
+}
