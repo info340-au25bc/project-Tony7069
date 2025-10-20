@@ -26,7 +26,6 @@ html, body { /* do not remove the body, homepage layout needs it !!! */
   padding: 1.5em 2em;
   border-radius: 15px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);S
 }
 
 .input-container-content h2 {
@@ -49,7 +48,7 @@ input[type="password"] {
 .login-page-buttons {
   display: flex;
   justify-content: center;
-  gap: 1.5em;
+  gap: 1.5em; /* gap? */
   margin-top: 0.5em;
 }
 
@@ -70,16 +69,16 @@ input[type="password"] {
     height: 100%;
 }
 
-.homepage-head-container {
+.homepage-nav-container {
     display: flex;
     width: 100%;
-    padding: 1em;
+    padding: 3em;
     background-color: #6c6c6c;
     align-items: center;
 }
 
-.homepage-head-container h1 {
-    font-size: 1.5rem;
+.homepage-nav-container h1 {
+    font-size: 3rem;
     flex: 1;
 }
 
@@ -90,10 +89,9 @@ input[type="password"] {
 
 .homepage-nav-buttons button {
     border: none;
-    padding: 1em;
-    margin: 0.5em;
-    font-size: 1rem;
-    height: 100%;
+    padding: 0.5em;
+    margin: 0.1em;
+    font-size: 1.8rem;
     border-radius: 15px;
 }
 
@@ -103,36 +101,92 @@ input[type="password"] {
 }
 
 .search-bar input {
-    font-size: 1em;
-    padding: 1em;
+    font-size: 1.8em;
+    padding: 0.5em;
     border: none;
     border-radius: 15px;
 }
+
+@media (min-width: 1200px) {
+    .homepage-nav-container {
+        display: flex;
+        width: 100%;
+        padding: 1em;
+        background-color: #6c6c6c;
+        align-items: center;
+    }
+    
+    .homepage-nav-container h1 {
+        font-size: 1.5rem;
+        flex: 1;
+    }
+    
+    .homepage-nav-buttons {
+        display: flex;
+        align-items: center;
+    }
+    
+    .homepage-nav-buttons button {
+        border: none;
+        padding: 1em;
+        margin: 0.5em;
+        font-size: 1rem;
+        height: 100%;
+        border-radius: 15px;
+    }
+    
+    .search-bar {
+        display: flex;
+        align-items: center;
+    }
+    
+    .search-bar input {
+        font-size: 1em;
+        padding: 1em;
+        border: none;
+        border-radius: 15px;
+    }
+}
+
+
 
 .homepage-content {
     flex: 1;
-    overflow-y: auto;
+    overflow-y: auto; /* do NOT  remove for scrolling feature */
 }
 
-.scroll-row {
+.card-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30%;
-    width: 100%;
+    flex-wrap: wrap;
 }
 
-.scroll-row > div {
-    width: 30%;
-    height: 90%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    margin-left: 1%;
-    margin-right: 1%;
+.card-container > div {
+    width: 50rem;
+    height: 40em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
     border: none;
     border-radius: 15px;
-    
 }
+
+@media (min-width: 1200px) {
+    .card-container > div {
+        width: 35em;
+        height: 20em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 2em;
+        margin-right: 2em;
+        border: none;
+        border-radius: 15px;
+    }
+}
+
+
 
 .scroll-box-green { /* placeholder, delelte this later! */
     background-color: #7e8c79;
