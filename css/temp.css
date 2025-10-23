@@ -1,0 +1,211 @@
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+} 
+
+html, body { /* do not remove the body, homepage layout needs it !!! */
+    height: 100%;
+}
+.post {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.homepage-nav-container {
+    display: flex;
+    width: 100%;
+    padding: 3em;
+    background-color: #6c6c6c;
+    align-items: center;
+}
+
+.homepage-nav-container h1 {
+    font-size: 3rem;
+    flex: 1;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    font-size: 1.8em;
+    padding: 0.5em;
+    border: none;
+    border-radius: 15px;
+}
+.post-home-button {
+        display: flex;
+        align-items: center;
+}
+    
+.post-home-button button {
+    border: none;
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    margin: 0.5em;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.post-content {
+    display: flex;
+    align-items: center;      
+    justify-content: center; 
+    min-height: 100vh;         
+    padding: 2rem;             
+    background: transparent;
+}
+.post-box .label-position {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #222;
+}
+.post-box .label-small {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    color: #333;
+}
+.post-box .field,
+.post-box form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+
+/* inputs full width */
+.post-box input[type="text"],
+.post-box textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.post-box {
+  background: transparent;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1.25rem;
+  min-width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 80vh;
+}
+
+.post-box .body-field {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;     
+  min-height: 0;  
+}
+
+.post-box .body-textarea {
+  flex: 1 1 auto;     
+  min-height: 160px;   
+  resize: vertical; 
+  padding: 0.75rem;
+}
+
+.post-box p {
+    font-size: 1.125rem;
+    text-align: center;
+    margin-top: 10rem;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10rem;
+}
+
+.post-box form.Body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+.post-box form.Body .body-textarea {
+  flex: 1 1 auto;
+  min-height: 160px;
+}
+
+.post-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%;
+    gap: 1rem;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+}
+
+.post-button-container .left-actions {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.post-button-container form.Tags {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 0 0 auto;
+}
+
+.post-button-container form.Tags input {
+  width: 140px;       
+  max-width: 30vw;       
+  padding: 0.35rem 0.5rem;
+  box-sizing: border-box;
+}
+
+.post-button-container form.Tags .label-small {
+  margin: 0;                
+  white-space: nowrap;      
+}
+
+.post-button-container .post-submit-button {
+    text-align: center;
+    max-width: 65px;
+    background: green;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.post-button-container .post-cancel-button {
+    text-align: center;
+    max-width: 65px;
+    background: transparent;
+    border: 1px solid #ccc;
+    color: #706e6e;
+    padding: 0.45rem 0.9rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .post-box .label-position { font-size: 1.125rem; }
+  .post-box .label-small { font-size: 0.95rem; }
+  .post-box .body-textarea { min-height: 120px; }
+}
+
