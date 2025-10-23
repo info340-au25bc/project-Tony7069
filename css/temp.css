@@ -16,13 +16,13 @@ html, body { /* do not remove the body, homepage layout needs it !!! */
 .homepage-nav-container {
     display: flex;
     width: 100%;
-    padding: 3em;
+    padding: 1em;
     background-color: #6c6c6c;
     align-items: center;
 }
 
 .homepage-nav-container h1 {
-    font-size: 3rem;
+    font-size: 1.5rem;
     flex: 1;
 }
 
@@ -32,8 +32,8 @@ html, body { /* do not remove the body, homepage layout needs it !!! */
 }
 
 .search-bar input {
-    font-size: 1.8em;
-    padding: 0.5em;
+    font-size: 1em;
+    padding: 1em;
     border: none;
     border-radius: 15px;
 }
@@ -59,9 +59,11 @@ html, body { /* do not remove the body, homepage layout needs it !!! */
     display: flex;
     align-items: center;      
     justify-content: center; 
-    min-height: 100vh;         
+    /* min-height: 100vh;*/ /* I modified this part because I dont think we need a space between boxes -Tony */
     padding: 2rem;             
     background: transparent;
+    flex: 1; /* I added this to let the position post section take all rest of the space - Tony */
+
 }
 .post-box .label-position {
     font-size: 1.25rem;

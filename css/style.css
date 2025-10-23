@@ -148,8 +148,6 @@ input[type="password"] {
     }
 }
 
-
-
 .homepage-content {
     flex: 1;
     overflow-y: auto; /* do NOT  remove for scrolling feature */
