@@ -184,11 +184,74 @@ input[type="password"] {
     }
 }
 
-
-
 .scroll-box-green { /* placeholder, delelte this later! */
     background-color: #7e8c79;
 }
 .scroll-box-gray { /* placeholder, delete this later! */
     background-color: #bebebe;
+}
+
+/* Recent Activities Page */
+
+.recent-activities-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.user-info-sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: #D9D9D9;
+    /* justify-content: center; */
+    position: fixed;
+    height: 100vh;
+    top: 6.125em; /* maybe change this part later */
+    /* TODO: Navbar currently have media query, 6.125em wont work for that media query, add media query for sidebar! */
+}
+
+.sidebar-buttons-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-buttons-container button {
+    background-color: #C7D0AE;
+    border: none;
+    border-radius: 15px;
+    padding: 1em;
+    margin: 1em;
+}
+
+.user-image {
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-image p {
+    padding: 1em;
+    background-color: lightpink;
+    border-radius: 50%;
+}
+
+.recent-activities-content-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-left: 31%;
+    overflow-y: auto;
+}
+
+.recent-activities-content-container div {
+    padding: 10em;
+    margin: 2em;
+    border-radius: 15px;
+}
+
+.recent-activities-content-container h1 {
+    margin-left: 1em;
+    margin-top: 0.5em;
 }
