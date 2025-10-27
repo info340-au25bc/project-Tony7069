@@ -37,6 +37,7 @@ html, body { /* do not remove the body, homepage layout needs it !!! */
     border: none;
     border-radius: 15px;
 }
+
 .post-home-button {
         display: flex;
         align-items: center;
@@ -129,10 +130,15 @@ html, body { /* do not remove the body, homepage layout needs it !!! */
     margin-top: 10rem;
 }
 
-h2 {
+.post-box h2 {
     font-size: 2rem;
     text-align: center;
     margin-bottom: 10rem;
+}
+
+.post-box h2 a {
+  text-decoration: none;
+  color: black;
 }
 
 .post-box form.Body {
