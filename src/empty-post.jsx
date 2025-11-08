@@ -1,4 +1,4 @@
-export function EmptyPost() {
+export default function EmptyPost() {
   return (
     <div className="post">
       <section className="navbar">
