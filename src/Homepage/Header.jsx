@@ -1,3 +1,6 @@
+import { use } from "react";
+import { useNavigate } from "react-router-dom";
+
 export function Header(props) {
     return (
         <div className="navbar">
@@ -15,14 +18,16 @@ export function Header(props) {
 }
 
 function ButtonAdd(props) {
+    const navigate = useNavigate();
     return (
-        <button>
+        <button onClick={() => navigate("/create-post")}>
             Add
         </button>
     )
 }
 
 function ButtonHamburger(props) {
+    // const navigate = useNavigate();
     return (
         <button>
             HM
