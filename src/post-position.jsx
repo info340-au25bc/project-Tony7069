@@ -1,4 +1,4 @@
-export function PostPosition() {
+export default function PostPosition() {
   return (
     <div className="post">
       <section className="navbar">
