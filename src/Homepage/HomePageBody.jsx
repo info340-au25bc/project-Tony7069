@@ -1,24 +1,41 @@
 import opportunities from "../data/opportunities.json"
+import { useState } from "react";
 
 export default function HomePageBody(props) {
     return (
         <section className="homepage-content">
-            <CardContainer />
+            <CardContainer allAddedOpportunities={props.allAddedOpportunities}/>
         </section>
     );
 }
 
 function CardContainer(props) {
-    const allOpportunities = opportunities.map((opportunity, index) => (
-        // TODO: Style this part later
-        <div key={index} className="scroll-box-green card">
-            <h3>{opportunity.title}</h3>
-            <p><strong>Company:</strong> {opportunity.company}</p>
-            <p><strong>Base Pay:</strong> {opportunity["base-pay"]}</p>
-            <p>{opportunity.description}</p>
-            <p><strong>Contact:</strong> {opportunity["contact-info"]}</p>
-        </div>
-    ));
+    const combinedOpportunities = [...opportunities, ...(props.allAddedOpportunities || [])];
+
+    const allOpportunities = combinedOpportunities.map((opportunity, index) => {
+        const {position, location, description, tags} = opportunity;
+        const basePay = opportunity["base-pay"];
+        const contactInfo = opportunity["contact-info"];
+        const allTags = tags.map((tag, innerIndex) => {
+            return <li key={index + innerIndex}>{ tag }</li>
+        });
+
+        const classNameAssignment = (index % 2) ? "scroll-box-green card" : "scroll-box-gray card";
+
+        return (
+            <div key={index} className= {classNameAssignment}>
+                <h3>{ position }</h3>
+                <p><strong>Location:</strong> { location }</p>
+                <p><strong>Base Pay:</strong> { basePay }</p>
+                <p><strong>Description: </strong>{ description }</p>
+                <p><strong>Contact:</strong> { contactInfo }</p>
+                <ul className="tags">
+                    <p><strong>Tags:</strong></p>
+                    { allTags }
+                </ul>
+            </div>
+        )
+    });
 
     return (
         <div className="card-container">

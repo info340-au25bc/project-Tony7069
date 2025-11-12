@@ -18,9 +18,6 @@ export default function EmptyPost() {
         </div>
       </section>
 
-      <footer>
-        <p>Copy right: ... Contact Info: ...</p>
-      </footer>
     </div>
   );
 }

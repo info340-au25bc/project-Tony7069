@@ -5,7 +5,7 @@ export default function Homepage(props) {
     return (
         <div className="homepage">
             <Header />
-            <HomePageBody />
+            <HomePageBody allAddedOpportunities={props.allAddedOpportunities}/>
         </div>
     )
 }

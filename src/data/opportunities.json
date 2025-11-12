@@ -1,86 +1,98 @@
 [
   {
-    "title": "Software Intern",
-    "company": "TechNova Labs",
+    "position": "Software Intern @ TechNova Labs",
+    "location": "Seattle, WA",
     "base-pay": "$32/hr",
     "description": "Assist with feature development and debugging on internal tools.",
-    "contact-info": "recruit@technova.com"
+    "contact-info": "recruit@technova.com",
+    "tags": ["#software", "#internship", "#fullstack"]
   },
   {
-    "title": "Business Analyst Internship",
-    "company": "DataBridge Consulting",
+    "position": "Business Analyst Internship @ DataBridge Consulting",
+    "location": "New York, NY",
     "base-pay": "$28/hr",
     "description": "Analyze client datasets and assist in strategy reports.",
-    "contact-info": "apply@databridge.net"
+    "contact-info": "apply@databridge.net",
+    "tags": ["#business", "#analytics", "#consulting"]
   },
   {
-    "title": "Marketing Assistant",
-    "company": "BluePeak Media",
+    "position": "Marketing Assistant @ BluePeak Media",
+    "location": "Los Angeles, CA",
     "base-pay": "$20/hr",
     "description": "Help manage social media campaigns and track engagement metrics.",
-    "contact-info": "jobs@bluepeakmedia.com"
+    "contact-info": "jobs@bluepeakmedia.com",
+    "tags": ["#marketing", "#social-media", "#content"]
   },
   {
-    "title": "Research Intern",
-    "company": "UW Bioinformatics Lab",
+    "position": "Research Intern @ UW Bioinformatics Lab",
+    "location": "Seattle, WA",
     "base-pay": "$18/hr",
     "description": "Assist PhD students with genomic data preprocessing and visualization.",
-    "contact-info": "lab-admin@uw.edu"
+    "contact-info": "lab-admin@uw.edu",
+    "tags": ["#research", "#bioinformatics", "#genomics"]
   },
   {
-    "title": "Frontend React Intern",
-    "company": "PixelForge Studio",
+    "position": "Frontend React Intern @ PixelForge Studio",
+    "location": "Austin, TX",
     "base-pay": "$35/hr",
     "description": "Implement UI components and assist with design refinements.",
-    "contact-info": "careers@pixelforge.com"
+    "contact-info": "careers@pixelforge.com",
+    "tags": ["#react", "#frontend", "#javascript"]
   },
   {
-    "title": "Machine Learning Intern",
-    "company": "DeepThink AI",
+    "position": "Machine Learning Intern @ DeepThink AI",
+    "location": "San Francisco, CA",
     "base-pay": "$40/hr",
     "description": "Build small prototypes using existing models and datasets.",
-    "contact-info": "hr@deepthink.ai"
+    "contact-info": "hr@deepthink.ai",
+    "tags": ["#machine-learning", "#python", "#ai"]
   },
   {
-    "title": "Software QA Tester",
-    "company": "StreamWorks Entertainment",
+    "position": "Software QA Tester @ StreamWorks Entertainment",
+    "location": "Atlanta, GA",
     "base-pay": "$22/hr",
     "description": "Test new features on multiple platforms and report bugs.",
-    "contact-info": "qa@streamworks.com"
+    "contact-info": "qa@streamworks.com",
+    "tags": ["#qa", "#testing", "#bug-reporting"]
   },
   {
-    "title": "Project Coordinator",
-    "company": "Horizon EdTech",
+    "position": "Project Coordinator @ Horizon EdTech",
+    "location": "Denver, CO",
     "base-pay": "$30/hr",
     "description": "Assist PM with agile tracking, sprint notes, and task distribution.",
-    "contact-info": "pm@horizonedtech.org"
+    "contact-info": "pm@horizonedtech.org",
+    "tags": ["#project-management", "#agile", "#coordination"]
   },
   {
-    "title": "Product Management Intern",
-    "company": "CloudCompass Software",
+    "position": "Product Management Intern @ CloudCompass Software",
+    "location": "Boston, MA",
     "base-pay": "$45/hr",
     "description": "Help write PRDs and coordinate with design and engineering teams.",
-    "contact-info": "recruit@cloudcompass.io"
+    "contact-info": "recruit@cloudcompass.io",
+    "tags": ["#product-management", "#pm", "#cross-functional"]
   },
   {
-    "title": "Sales Development Rep",
-    "company": "Pioneer Robotics",
+    "position": "Sales Development Rep @ Pioneer Robotics",
+    "location": "Chicago, IL",
     "base-pay": "$25/hr",
     "description": "Handle warm outreach to leads and help organize demos.",
-    "contact-info": "sales@pioneerbotics.com"
+    "contact-info": "sales@pioneerbotics.com",
+    "tags": ["#sales", "#outreach", "#crm"]
   },
   {
-    "title": "Support Engineer Intern",
-    "company": "NeonNetwork Infrastructure",
+    "position": "Support Engineer Intern @ NeonNetwork Infrastructure",
+    "location": "San Jose, CA",
     "base-pay": "$33/hr",
     "description": "Handle minor troubleshooting and assist senior engineers.",
-    "contact-info": "support@neonnetwork.dev"
+    "contact-info": "support@neonnetwork.dev",
+    "tags": ["#support", "#troubleshooting", "#network"]
   },
   {
-    "title": "Content Writer",
-    "company": "InsightEdge News",
+    "position": "Content Writer @ InsightEdge News",
+    "location": "Portland, OR",
     "base-pay": "$21/hr",
     "description": "Write weekly content summaries and publish articles.",
-    "contact-info": "editor@insightedge.news"
+    "contact-info": "editor@insightedge.news",
+    "tags": ["#writing", "#content", "#editorial"]
   }
 ]

@@ -505,3 +505,25 @@ input[type="password"] {
 .profile-page-button:hover {
     background-color: #EAEAEA;
 }
+
+.card ul {
+    list-style-type: none;
+}
+
+.card h3 {
+    text-align: center;
+    font-family: 'Georgia', sans-serif;
+    margin: 1em;
+}
+
+.card p {
+    margin: 1em;
+}
+
+.card .tags {
+    display: flex;
+}
+
+.tags li {
+    margin: 1rem;
+}
