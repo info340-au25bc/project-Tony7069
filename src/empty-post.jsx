@@ -1,4 +1,5 @@
-import { Header } from './Homepage/Header.jsx';
+// import { Header } from './Homepage/Header.jsx';
+import { SpecialNav } from "./Post-Position/SpecialNav";
 import { useNavigate } from "react-router-dom";
 
 export default function EmptyPost() {
@@ -6,7 +7,7 @@ export default function EmptyPost() {
   return (
     <div className="post">
       <section className="navbar">
-        <Header />
+        <SpecialNav />
       </section>
 
       <section className="post-content">

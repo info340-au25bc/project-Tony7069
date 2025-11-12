@@ -27,9 +27,9 @@ function ButtonAdd(props) {
 }
 
 function ButtonHamburger(props) {
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     return (
-        <button>
+        <button onClick={() => navigate("/saved-posts")}>
             HM
         </button>
     )

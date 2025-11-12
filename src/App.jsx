@@ -25,7 +25,7 @@ export default function App() {
         <Route path="/create-post" element={<EmptyPost />} />
         <Route path="/position" element={<PostPosition addToList={addToList}/>} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/saved-posts" element={<SavedPosts />} />
+        <Route path="/saved-posts" element={<SavedPosts allAddedOpportunities={allAddedOpportunities}/>} />
       </Routes>
 
       <footer>

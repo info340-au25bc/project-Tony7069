@@ -1,9 +1,12 @@
-import { Header } from './Homepage/Header.jsx';
-export default function SavedPosts() {
+// import { Header } from './Homepage/Header.jsx';
+import { SpecialNav } from './Post-Position/SpecialNav.jsx';
+import { RecentActivitiesContentContainer } from './savedPosts/RecentActivitiesContentContainer.jsx';
+
+export default function SavedPosts(props) {
   return (
     <div className="recent-activities-page">
       <section className="navbar">
-        <Header/>
+        <SpecialNav/>
       </section>
 
       <section className="user-info-sidebar">
@@ -19,14 +22,7 @@ export default function SavedPosts() {
         </div>
       </section>
 
-      <section className="recent-activities-content-container">
-        <h1>Saved Posts</h1>
-        <div className="scroll-box-green">space reserved</div>
-        <div className="scroll-box-gray">space reserved</div>
-        <div className="scroll-box-green">space reserved</div>
-        <div className="scroll-box-gray">space reserved</div>
-        <div className="scroll-box-green">space reserved</div>
-      </section>
+      <RecentActivitiesContentContainer allAddedOpportunities={props.allAddedOpportunities} />
     </div>
   );
 }

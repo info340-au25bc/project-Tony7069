@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function InputForm(props) {
 
@@ -48,7 +48,7 @@ export function InputForm(props) {
         return tags;
     }
 
-
+    const navigate = useNavigate();
 
     return (
         <section className="post-content">
@@ -57,37 +57,26 @@ export function InputForm(props) {
                 <label className="label-position" htmlFor="position">Position</label>
                 <input id="position" type="text" name="position" placeholder="Position Title" />
 
-
-
                 <label className="label-small" htmlFor="location">Location</label>
                 <input id="location" type="text" name="location" placeholder="Location" />
-
-
 
                 <label className="label-small" htmlFor="basepay">Base Pay</label>
                 <input id="basepay" type="text" name="basepay" placeholder="Base Pay" />
 
-
-
                 <label className="label-small" htmlFor="body">Description</label>
                 <textarea id="body" name="body" className="body-textarea" />
-
-
 
                 <label className="label-small" htmlFor="contact">Contact-Info </label>
                 <textarea id="contact" name="contact" className="body-textarea" />
 
-
                 <div className="post-button-container">
                     <div className="left-actions">
                         <button type="submit" id="post-btn" className="post-submit-button">Post</button>
-                        <Link to="/create-post">
-                            <button type="button" className="post-cancel-button">Cancel</button>
-                        </Link>
+                        <button type="button" className="post-cancel-button" onClick={() => navigate("/create-post")}>Cancel</button>
                     </div>
 
                     <label className="label-small" htmlFor="tags">Tags</label>
-                    <input id="tags" type="text" name="tags" placeholder="#Tags, Do not put space between tags" />
+                    <input id="tags" type="text" name="tags" placeholder="#Tags, Do not put space between tags. For example: '#tag1#tag2#tag3...'" />
 
                 </div>
             </form>
