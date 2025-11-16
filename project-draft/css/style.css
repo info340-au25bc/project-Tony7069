@@ -11,13 +11,13 @@ html, body { /* do not remove the body, homepage layout needs it !!! */
 /* LOGIN PAGE SECTION: */
 .login-signup {
   font-family: 'Georgia', sans-serif;
-  background-color: #c2b9b9;
+  /* background-color: #c2b9b9; */
+  background: linear-gradient(135deg, #6EE7B7 10%, #3B82F6 50%, #9333EA 100%);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  
 }
 
 .input-container-content {
@@ -26,11 +26,27 @@ html, body { /* do not remove the body, homepage layout needs it !!! */
   padding: 1.5em 2em;
   border-radius: 15px;
   text-align: center;
+
+  opacity: 0.80;
 }
 
 .input-container-content h2 {
   margin: 1.25em;
 }
+
+/* This is for fun */
+/* .video-background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
 
 input[type="email"],
 input[type="password"] {
