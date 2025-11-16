@@ -1,4 +1,4 @@
-import { use } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export function Header(props) {
@@ -10,7 +10,7 @@ export function Header(props) {
                     <ButtonHamburger />
                     <ButtonAdd />
                 </div>
-                <SearchBar />   
+                <SearchBar search={props.search}/>   
             </div>
         </div>
 
@@ -36,9 +36,14 @@ function ButtonHamburger(props) {
 }
 
 function SearchBar(props) {
+    // control structure?
+    function handleSearch() {
+        props.search(event.target.value);
+    }
+
     return (
         <form className="search-bar">
-            <input type="text" placeholder="Search..." />
+            <input type="text" placeholder="Search..." onChange={handleSearch}/>
         </form>
     )
 }

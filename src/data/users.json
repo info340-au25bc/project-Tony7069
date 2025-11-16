@@ -1,0 +1,14 @@
+[
+    {
+        "username": "Tony",
+        "email": "xli56@uw.edu",
+        "password": "tonyinfo340",
+        "status": "logout"
+    },
+    {
+        "username": "Thomas",
+        "email": "tgus@uw.edu",
+        "password": "thomasinfo340",
+        "status": "logout"
+    }
+]

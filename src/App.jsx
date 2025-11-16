@@ -13,9 +13,15 @@ import SavedPosts from './saved-posts.jsx';
 export default function App() {
 
   const [allAddedOpportunities, setAllAddedOpportunities] = useState([]);
+  const [currentUser, setCurrentUser] = useState('');
 
   function addToList(newOpportunity) {
     setAllAddedOpportunities(beforeUpdate => [...beforeUpdate, newOpportunity]);
+  }
+
+  function alterCurrentUser(username) {
+    setCurrentUser(username);
+    // console.log(username);
   }
 
   return (
@@ -24,7 +30,7 @@ export default function App() {
         <Route path="/" element={<Homepage allAddedOpportunities={allAddedOpportunities}/>} />
         <Route path="/create-post" element={<EmptyPost />} />
         <Route path="/position" element={<PostPosition addToList={addToList}/>} />
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="/login" element={<LoginPage alterCurrentUser={alterCurrentUser}/>} />
         <Route path="/saved-posts" element={<SavedPosts allAddedOpportunities={allAddedOpportunities}/>} />
       </Routes>
 

@@ -5,13 +5,25 @@ import { useState } from "react";
 export default function HomePageBody(props) {
     return (
         <section className="homepage-content">
-            <CardContainer allAddedOpportunities={props.allAddedOpportunities}/>
+            <CardContainer allAddedOpportunities={props.allAddedOpportunities} enteredTag={props.enteredTag}/>
         </section>
     );
 }
 
 function CardContainer(props) {
-    const combinedOpportunities = [...opportunities, ...(props.allAddedOpportunities || [])];
+    let combinedOpportunities = [...opportunities, ...(props.allAddedOpportunities || [])];
+
+    // For the searching function
+    const filterTagFromSearch = props.enteredTag.toLowerCase();
+    if (filterTagFromSearch !== '') {
+        combinedOpportunities = combinedOpportunities.filter(opportunity => {
+            const tagsList = opportunity.tags;
+            for (let i = 0; i < tagsList.length; i++) {
+                if (tagsList[i].toLowerCase() === '#' + filterTagFromSearch) return true;
+            }
+            return false;
+        });
+    }
 
     const allOpportunities = combinedOpportunities.map((opportunity, index) => {
         const {position, location, description, tags} = opportunity;
@@ -35,7 +47,7 @@ function CardContainer(props) {
                     <h3 className="job-title">{position}</h3>
 
                     <p className="location">
-                    Seattle, WA — <span className="pay">{basePay}</span>
+                    {location} — <span className="pay">{basePay}</span>
                     </p>
 
                     <div className="description-box">
@@ -47,7 +59,7 @@ function CardContainer(props) {
                     <div className="tags">{allTags}</div>
 
                     <div className="cards-buttons-container">
-                        <button className="info-btn">Info</button>
+                        <button className="save-btn">Save</button>
                         <button className="apply-btn">Apply</button>
                     </div>
                 </div>

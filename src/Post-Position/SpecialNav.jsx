@@ -1,14 +1,14 @@
 import { useNavigate } from "react-router-dom";
 
+import { SearchBar } from "../Homepage/SearchBar";
+
 export function SpecialNav(props) {
     const navigate = useNavigate();
     return (
         <section className="navbar">
             <div className="homepage-nav-container">
                 <h1>InternShipper</h1>
-                <form className="search-bar">
-                    <input type="text" placeholder="Search..." />
-                </form>
+                <SearchBar />
                 <div className="post-home-button">
                     <a>
                     <button onClick={() => navigate("/")}>Home</button>

@@ -94,5 +94,894 @@
     "description": "Write weekly content summaries and publish articles.",
     "contact-info": "editor@somewhere.news",
     "tags": ["#writing", "#content", "#editorial"]
+  },
+    {
+    "position": "Cybersecurity Intern @ ShieldMatrix Defense",
+    "location": "Houston, TX",
+    "base-pay": "$34/hr",
+    "description": "Assist cybersecurity analysts with threat detection reports and vulnerability scans.",
+    "contact-info": "security@somewhere.net",
+    "tags": ["#cybersecurity", "#infosec", "#threat-analysis"]
+  },
+  {
+    "position": "UI/UX Design Intern @ CanvasFlow Studio",
+    "location": "Seattle, WA",
+    "base-pay": "$27/hr",
+    "description": "Create wireframes and mockups for new product experiences.",
+    "contact-info": "design@somewhere.com",
+    "tags": ["#uiux", "#design", "#figma"]
+  },
+  {
+    "position": "Data Science Intern @ NovaQuant Analytics",
+    "location": "San Francisco, CA",
+    "base-pay": "$42/hr",
+    "description": "Help build predictive models and analyze customer datasets.",
+    "contact-info": "ds@somewhere.ai",
+    "tags": ["#data-science", "#python", "#ml"]
+  },
+  {
+    "position": "Operations Assistant @ RapidShip Logistics",
+    "location": "Dallas, TX",
+    "base-pay": "$19/hr",
+    "description": "Coordinate shipping schedules and assist with inventory updates.",
+    "contact-info": "ops@somewhere.org",
+    "tags": ["#operations", "#logistics", "#supply-chain"]
+  },
+  {
+    "position": "Video Editing Intern @ BrightPixel Media",
+    "location": "Los Angeles, CA",
+    "base-pay": "$20/hr",
+    "description": "Edit short-form video content for client campaigns.",
+    "contact-info": "media@somewhere.tv",
+    "tags": ["#video-editing", "#premiere", "#after-effects"]
+  },
+  {
+    "position": "Cloud Engineering Intern @ SkyBridge Cloud Systems",
+    "location": "Austin, TX",
+    "base-pay": "$38/hr",
+    "description": "Assist in configuring cloud infrastructure and writing deployment scripts.",
+    "contact-info": "cloud@somewhere.dev",
+    "tags": ["#cloud", "#aws", "#devops"]
+  },
+  {
+    "position": "Financial Analyst Intern @ SummitPeak Capital",
+    "location": "New York, NY",
+    "base-pay": "$30/hr",
+    "description": "Analyze financial statements and help prepare market insights.",
+    "contact-info": "finance@somewhere.com",
+    "tags": ["#finance", "#analysis", "#investing"]
+  },
+  {
+    "position": "IT Support Intern @ ByteCare Solutions",
+    "location": "Phoenix, AZ",
+    "base-pay": "$18/hr",
+    "description": "Help troubleshoot internal software issues and manage user requests.",
+    "contact-info": "support@somewhere.help",
+    "tags": ["#it", "#support", "#helpdesk"]
+  },
+  {
+    "position": "Backend Engineer Intern @ CodeFusion Labs",
+    "location": "San Diego, CA",
+    "base-pay": "$36/hr",
+    "description": "Assist with API development and performance optimization.",
+    "contact-info": "backend@somewhere.dev",
+    "tags": ["#backend", "#nodejs", "#api"]
+  },
+  {
+    "position": "Product Design Intern @ NovaUX Collective",
+    "location": "Portland, OR",
+    "base-pay": "$29/hr",
+    "description": "Support senior designers by creating component libraries and prototypes.",
+    "contact-info": "ux@somewhere.design",
+    "tags": ["#design", "#uiux", "#prototyping"]
+  },
+  {
+    "position": "Data Engineering Intern @ BigStream DataWorks",
+    "location": "Chicago, IL",
+    "base-pay": "$40/hr",
+    "description": "Build ETL pipelines and assist in maintaining data warehouse systems.",
+    "contact-info": "de@somewhere.io",
+    "tags": ["#data-engineering", "#etl", "#sql"]
+  },
+  {
+    "position": "Gameplay Developer Intern @ PixelWorks Interactive",
+    "location": "Raleigh, NC",
+    "base-pay": "$33/hr",
+    "description": "Implement gameplay mechanics and debug UI interactions.",
+    "contact-info": "games@somewhere.gg",
+    "tags": ["#gamedev", "#unity", "#csharp"]
+  },
+  {
+    "position": "Biotech Research Assistant @ GenomePath Labs",
+    "location": "San Francisco, CA",
+    "base-pay": "$26/hr",
+    "description": "Assist in wet lab experiments and genomic data documentation.",
+    "contact-info": "bio@somewhere.bio",
+    "tags": ["#biotech", "#genomics", "#research"]
+  },
+  {
+    "position": "HR Recruiting Intern @ PeopleFirst Talent Group",
+    "location": "Miami, FL",
+    "base-pay": "$21/hr",
+    "description": "Screen resumes and coordinate candidate interviews.",
+    "contact-info": "hr@somewhere.jobs",
+    "tags": ["#hr", "#recruiting", "#talent"]
+  },
+  {
+    "position": "AI Research Intern @ QuantumForge AI",
+    "location": "Boston, MA",
+    "base-pay": "$48/hr",
+    "description": "Assist in training models and writing research drafts on model efficiency.",
+    "contact-info": "research@somewhere.ai",
+    "tags": ["#ai", "#research", "#ml"]
+  },
+  {
+    "position": "Environmental Analyst Intern @ GreenGrid Sustainability",
+    "location": "Seattle, WA",
+    "base-pay": "$24/hr",
+    "description": "Collect environmental data and help draft sustainability reports.",
+    "contact-info": "eco@somewhere.org",
+    "tags": ["#environment", "#sustainability", "#analysis"]
+  },
+  {
+    "position": "Mobile App Developer Intern @ AppCraft Studios",
+    "location": "Denver, CO",
+    "base-pay": "$34/hr",
+    "description": "Build mobile components and fix UI responsiveness issues.",
+    "contact-info": "apps@somewhere.dev",
+    "tags": ["#mobile", "#react-native", "#ios"]
+  },
+  {
+    "position": "Social Media Intern @ WaveReach Marketing",
+    "location": "Los Angeles, CA",
+    "base-pay": "$19/hr",
+    "description": "Schedule posts, create captions, and analyze engagement performance.",
+    "contact-info": "media@somewhere.social",
+    "tags": ["#social-media", "#content", "#marketing"]
+  },
+  {
+    "position": "CAD Design Intern @ BuildCore Engineering",
+    "location": "Detroit, MI",
+    "base-pay": "$28/hr",
+    "description": "Assist mechanical engineers by updating CAD models and drawings.",
+    "contact-info": "cad@somewhere.me",
+    "tags": ["#cad", "#engineering", "#solidworks"]
+  },
+  {
+    "position": "Data Visualization Intern @ GraphIQ Insights",
+    "location": "San Jose, CA",
+    "base-pay": "$32/hr",
+    "description": "Create dashboards and data visuals using BI tools.",
+    "contact-info": "viz@somewhere.io",
+    "tags": ["#data-viz", "#tableau", "#dashboards"]
+  },
+    {
+    "position": "Robotics Intern @ MotionCore Robotics",
+    "location": "Pittsburgh, PA",
+    "base-pay": "$31/hr",
+    "description": "Assist in testing robotic arm algorithms and performing calibration tasks.",
+    "contact-info": "robotics@somewhere.ai",
+    "tags": ["#robotics", "#automation", "#testing"]
+  },
+  {
+    "position": "Business Operations Intern @ ApexFlow Industries",
+    "location": "Atlanta, GA",
+    "base-pay": "$23/hr",
+    "description": "Support operations planning and assist in workflow optimization.",
+    "contact-info": "ops@somewhere.biz",
+    "tags": ["#operations", "#business", "#workflow"]
+  },
+  {
+    "position": "Frontend Developer Intern @ BrightLabs Web",
+    "location": "San Diego, CA",
+    "base-pay": "$33/hr",
+    "description": "Help build responsive website components using modern frameworks.",
+    "contact-info": "frontend@somewhere.dev",
+    "tags": ["#frontend", "#javascript", "#webdev"]
+  },
+  {
+    "position": "AI Support Intern @ NeuralSphere Tools",
+    "location": "San Francisco, CA",
+    "base-pay": "$28/hr",
+    "description": "Assist users in troubleshooting AI-assisted software tools.",
+    "contact-info": "support@somewhere.ai",
+    "tags": ["#ai", "#support", "#customer-success"]
+  },
+  {
+    "position": "Bioinformatics Assistant @ GeneWave Research",
+    "location": "Seattle, WA",
+    "base-pay": "$25/hr",
+    "description": "Analyze small datasets and support genome annotation tasks.",
+    "contact-info": "bio@somewhere.bio",
+    "tags": ["#bioinformatics", "#genomics", "#research"]
+  },
+  {
+    "position": "UX Research Intern @ InsightCanvas UX",
+    "location": "Boston, MA",
+    "base-pay": "$26/hr",
+    "description": "Conduct user interviews and help analyze qualitative insights.",
+    "contact-info": "ux@somewhere.design",
+    "tags": ["#ux", "#research", "#design"]
+  },
+  {
+    "position": "Unity Developer Intern @ GameSpark Studios",
+    "location": "Austin, TX",
+    "base-pay": "$30/hr",
+    "description": "Work on gameplay prototypes and assist with debugging.",
+    "contact-info": "dev@somewhere.gg",
+    "tags": ["#gamedev", "#unity", "#csharp"]
+  },
+  {
+    "position": "Cloud Infrastructure Intern @ NimbusTech Cloud",
+    "location": "Portland, OR",
+    "base-pay": "$37/hr",
+    "description": "Help configure infrastructure-as-code templates and maintain deployments.",
+    "contact-info": "cloud@somewhere.io",
+    "tags": ["#cloud", "#devops", "#aws"]
+  },
+  {
+    "position": "Digital Marketing Intern @ AdNova Media Group",
+    "location": "Los Angeles, CA",
+    "base-pay": "$19/hr",
+    "description": "Assist with campaign reporting and ad performance tracking.",
+    "contact-info": "ads@somewhere.social",
+    "tags": ["#marketing", "#digital", "#ads"]
+  },
+  {
+    "position": "Mathematical Modeling Intern @ VectorDynamics Lab",
+    "location": "Raleigh, NC",
+    "base-pay": "$34/hr",
+    "description": "Support research engineers in building analytical and numerical models.",
+    "contact-info": "math@somewhere.org",
+    "tags": ["#modeling", "#math", "#analysis"]
+  },
+  {
+    "position": "Cybersecurity Intern @ ShieldGate Defense",
+    "location": "Arlington, VA",
+    "base-pay": "$38/hr",
+    "description": "Assist with penetration tests, vulnerability scanning, and creation of internal security reports.",
+    "contact-info": "security@somewhere.defense",
+    "tags": ["#pentesting", "#cyber-security", "#vulnerability"]
+  },
+  {
+    "position": "SOC Analyst Intern @ Sentinel Cyber Ops",
+    "location": "Dallas, TX",
+    "base-pay": "$34/hr",
+    "description": "Monitor SIEM alerts, help document incident responses, and escalate security threats.",
+    "contact-info": "soc@somewhere.operations",
+    "tags": ["#cyber-security", "#soc", "#siem"]
+  },
+  {
+    "position": "Information Security Assistant @ IronWall Tech",
+    "location": "San Diego, CA",
+    "base-pay": "$31/hr",
+    "description": "Support the InfoSec team by updating access logs, reviewing risk assessments, and organizing audits.",
+    "contact-info": "infosec@somewhere.tech",
+    "tags": ["#cyber-security", "#infosec", "#audit"]
+  },
+  {
+    "position": "SEO Specialist Intern @ SearchNova Digital",
+    "location": "Miami, FL",
+    "base-pay": "$22/hr",
+    "description": "Optimize content, perform keyword research, and update meta tags.",
+    "contact-info": "seo@somewhere.net",
+    "tags": ["#seo", "#marketing", "#web"]
+  },
+  {
+    "position": "Firmware Intern @ CircuitWave Technologies",
+    "location": "San Jose, CA",
+    "base-pay": "$35/hr",
+    "description": "Assist in writing embedded code for prototype hardware boards.",
+    "contact-info": "fw@somewhere.dev",
+    "tags": ["#firmware", "#embedded", "#c"]
+  },
+  {
+    "position": "Physics Research Intern @ QuantumPulse Lab",
+    "location": "Chicago, IL",
+    "base-pay": "$28/hr",
+    "description": "Run simulations and analyze experimental datasets.",
+    "contact-info": "physics@somewhere.edu",
+    "tags": ["#physics", "#research", "#simulation"]
+  },
+  {
+    "position": "Customer Success Intern @ SupportSphere",
+    "location": "Phoenix, AZ",
+    "base-pay": "$20/hr",
+    "description": "Help customers troubleshoot platform issues and escalate technical bugs.",
+    "contact-info": "care@somewhere.help",
+    "tags": ["#support", "#customer-success", "#communication"]
+  },
+  {
+    "position": "AI Prompt Engineer Intern @ Lumina Creative AI",
+    "location": "New York, NY",
+    "base-pay": "$40/hr",
+    "description": "Design structured prompts and test LLM output reliability.",
+    "contact-info": "prompt@somewhere.ai",
+    "tags": ["#ai", "#prompt-engineering", "#nlp"]
+  },
+  {
+    "position": "Medical Data Assistant @ HealTrack Health Systems",
+    "location": "Denver, CO",
+    "base-pay": "$23/hr",
+    "description": "Prepare anonymized datasets and validate clinical reports.",
+    "contact-info": "health@somewhere.org",
+    "tags": ["#health", "#data", "#medical"]
+  },
+  {
+    "position": "Blockchain Intern @ LedgerPeak Innovations",
+    "location": "Austin, TX",
+    "base-pay": "$37/hr",
+    "description": "Develop smart contract tests and help maintain blockchain nodes.",
+    "contact-info": "chain@somewhere.io",
+    "tags": ["#blockchain", "#solidity", "#crypto"]
+  },
+  {
+    "position": "Technical Research Intern @ NovaSystems Analytics",
+    "location": "Seattle, WA",
+    "base-pay": "$36/hr",
+    "description": "Work closely with senior analysts to conduct deep-dive technical investigations on emerging software systems, cloud platforms, and data-driven infrastructures used across different industries. This role requires the intern to read through extensive documentation, research papers, and engineering blogs to summarize complex topics into digestible formats for both technical and non-technical stakeholders. You will help maintain a continuously updated knowledge repository that informs internal engineering teams about new trends, potential security risks, and recommended implementation strategies. Daily responsibilities may include analyzing architecture diagrams, comparing performance benchmarks, reviewing design patterns, and evaluating trade-offs between competing technologies. You may also be asked to help draft internal whitepapers, assist in writing prototype scripts, or create small proof-of-concept demos to validate ideas. This position places a strong emphasis on independent learning, curiosity, and structured thinking. Ideal applicants should be comfortable synthesizing large volumes of information, asking thoughtful questions, and documenting findings with clarity and precision. While no prior professional experience is required, the ability to manage time effectively, navigate technical ambiguity, and communicate insights clearly will be key to success. This internship is designed to prepare students for deeper research roles in software engineering, product strategy, or technical consulting.",
+    "contact-info": "research@somewhere.systems",
+    "tags": ["#long-description"]
+  },
+  {
+    "position": "Operations Strategy Intern @ Horizon Global Logistics",
+    "location": "Newark, NJ",
+    "base-pay": "$29/hr",
+    "description": "Assist the operations strategy division in evaluating how global supply chains behave under varying market conditions, demand surges, and transportation constraints. Interns will work with large datasets, qualitative reports, and real-time logistics dashboards to identify patterns and suggest improvements to distribution efficiency. You will be responsible for reviewing inbound and outbound shipping metrics, forecasting bottlenecks, and preparing weekly summaries for leadership. This role also involves shadowing senior analysts during vendor negotiations, warehouse planning sessions, and cross-departmental coordination meetings. You will learn how decisions are made at scale, how risk is assessed, and how operational trade-offs are prioritized in time-sensitive environments. In addition to analytical work, interns are expected to contribute to long-form strategic documents that outline potential cost-savings, workflow adjustments, or technology upgrades. These documents often exceed several pages and require thoughtful structuring, attention to detail, and precise communication. By the end of the internship, students should gain an in-depth understanding of logistical decision-making, enterprise-level communication practices, and the complexities behind global product movement. This opportunity is ideal for individuals interested in supply chain optimization, business operations, or long-term strategic planning.",
+    "contact-info": "ops@somewhere.global",
+    "tags": ["#long-description"]
+  },
+  {
+    "position": "Education Research Intern @ BrightFuture Learning Lab",
+    "location": "Madison, WI",
+    "base-pay": "$24/hr",
+    "description": "Support ongoing research projects focused on student learning behavior, technology-assisted teaching methods, and the long-term effects of digital tools on classroom performance. Interns will review hundreds of pages of educational literature, analyze qualitative interview transcripts, and help design student surveys that align with institutional research standards. You will participate in weekly meetings with faculty researchers and graduate students to discuss findings, debate interpretations, and revise hypotheses based on new evidence. A major component of the internship involves writing extended synthesis reports that summarize the state of the field, highlight research gaps, and outline possible directions for future studies. These reports are expected to exceed 200 words and often require meticulous editing to ensure clarity and accuracy. You may also assist with coding observational data, cleaning survey results, and preparing visualizations that help communicate complex trends. The position emphasizes patience, analytical rigor, and strong writing skills. By the end of the internship, you should develop a deeper understanding of education research methods, ethical considerations, and the challenges of interpreting human behavior in academic contexts. This role is ideal for students interested in education policy, learning science, academic research, or graduate-level study.",
+    "contact-info": "learninglab@somewhere.edu",
+    "tags": ["#long-description"]
+  },
+
+  {
+    "position": "Cyber Risk Analyst Intern @ IronShield Security",
+    "location": "Houston, TX",
+    "base-pay": "$30/hr",
+    "description": "Assist analysts in documenting vulnerabilities and drafting reports.",
+    "contact-info": "risk@somewhere.net",
+    "tags": ["#cybersecurity", "#risk", "#analysis"]
+  },
+  {
+    "position": "AI Ethics Research Intern @ EthicMind Institute",
+    "location": "Boston, MA",
+    "base-pay": "$27/hr",
+    "description": "Investigate bias patterns in AI systems and prepare ethical guidance.",
+    "contact-info": "ethics@somewhere.ai",
+    "tags": ["#ethics", "#ai", "#research"]
+  },
+  {
+    "position": "VR Developer Intern @ ImmersionWorks",
+    "location": "Seattle, WA",
+    "base-pay": "$32/hr",
+    "description": "Build VR experience prototypes and assist with performance tuning.",
+    "contact-info": "vr@somewhere.gg",
+    "tags": ["#vr", "#unity", "#gamedev"]
+  },
+  {
+    "position": "Manufacturing Analyst Intern @ SteelCore Fabrication",
+    "location": "Detroit, MI",
+    "base-pay": "$25/hr",
+    "description": "Assist in process monitoring and improve assembly line productivity.",
+    "contact-info": "mfg@somewhere.biz",
+    "tags": ["#manufacturing", "#analysis", "#engineering"]
+  },
+  {
+    "position": "Electrical Engineering Intern @ VoltEdge Systems",
+    "location": "San Jose, CA",
+    "base-pay": "$34/hr",
+    "description": "Help design PCB layouts and assist with circuit validation.",
+    "contact-info": "ee@somewhere.dev",
+    "tags": ["#electrical", "#pcb", "#circuit-design"]
+  },
+  {
+    "position": "Web Content Intern @ InfoStream Media",
+    "location": "Los Angeles, CA",
+    "base-pay": "$18/hr",
+    "description": "Research article topics and create engaging web content.",
+    "contact-info": "content@somewhere.news",
+    "tags": ["#content", "#writing", "#web"]
+  },
+  {
+    "position": "Genetic Lab Assistant @ HelixCore Biotech",
+    "location": "San Francisco, CA",
+    "base-pay": "$26/hr",
+    "description": "Prepare samples, run assays, and document genetic workflows.",
+    "contact-info": "lab@somewhere.bio",
+    "tags": ["#genetics", "#biotech", "#lab"]
+  },
+  {
+    "position": "SDET Intern @ TestForge Automation",
+    "location": "Raleigh, NC",
+    "base-pay": "$36/hr",
+    "description": "Write automated test cases and evaluate code reliability.",
+    "contact-info": "sdet@somewhere.dev",
+    "tags": ["#testing", "#automation", "#qa"]
+  },
+  {
+    "position": "Business Strategy Intern @ GrowthSphere Advisors",
+    "location": "Chicago, IL",
+    "base-pay": "$31/hr",
+    "description": "Analyze competitor data and support strategy planning.",
+    "contact-info": "strategy@somewhere.com",
+    "tags": ["#business", "#strategy", "#analysis"]
+  },
+  {
+    "position": "Chemical Lab Intern @ SynthLab Research Center",
+    "location": "Houston, TX",
+    "base-pay": "$24/hr",
+    "description": "Assist chemists with reaction experiments and maintain lab records.",
+    "contact-info": "chem@somewhere.org",
+    "tags": ["#chemistry", "#lab", "#research"]
+  },
+  {
+    "position": "AI Robotics Intern @ MechaMind Automation",
+    "location": "Pittsburgh, PA",
+    "base-pay": "$46/hr",
+    "description": "Develop reinforcement learning agents for robotic tasks.",
+    "contact-info": "ai-robotics@somewhere.ai",
+    "tags": ["#ai", "#robotics", "#rl"]
+  },
+  {
+    "position": "Project Management Intern @ TaskFlow Corporate",
+    "location": "Denver, CO",
+    "base-pay": "$29/hr",
+    "description": "Update project timelines and assist PMs with meeting facilitation.",
+    "contact-info": "pm@somewhere.io",
+    "tags": ["#project-management", "#coordination", "#agile"]
+  },
+  {
+    "position": "Research Writer Intern @ DataInsight Press",
+    "location": "New York, NY",
+    "base-pay": "$21/hr",
+    "description": "Draft summaries of data reports and write research articles.",
+    "contact-info": "editor@somewhere.news",
+    "tags": ["#writing", "#research", "#content"]
+  },
+  {
+    "position": "Mechanical Engineering Intern @ AutoForge Motors",
+    "location": "Detroit, MI",
+    "base-pay": "$28/hr",
+    "description": "Support design engineers by running simulations and building prototypes.",
+    "contact-info": "mech@somewhere.engineer",
+    "tags": ["#mechanical", "#engineering", "#cad"]
+  },
+  {
+    "position": "AI Tooling Intern @ SynapseBuilder AI",
+    "location": "San Francisco, CA",
+    "base-pay": "$39/hr",
+    "description": "Test internal LLM tools and optimize prompt routing algorithms.",
+    "contact-info": "tools@somewhere.ai",
+    "tags": ["#ai", "#tools", "#llm"]
+  },
+  {
+    "position": "E-commerce Operations Intern @ ShopStream Global",
+    "location": "Chicago, IL",
+    "base-pay": "$20/hr",
+    "description": "Support inventory, vendor communication, and product listings.",
+    "contact-info": "commerce@somewhere.biz",
+    "tags": ["#ecommerce", "#operations", "#inventory"]
+  },
+  {
+    "position": "Data Labeling Intern @ LabelForge AI",
+    "location": "Phoenix, AZ",
+    "base-pay": "$16/hr",
+    "description": "Annotate training data and ensure labeling quality consistency.",
+    "contact-info": "label@somewhere.ai",
+    "tags": ["#data", "#annotation", "#ml"]
+  },
+  {
+    "position": "Software Documentation Intern @ TechScript Systems",
+    "location": "Austin, TX",
+    "base-pay": "$22/hr",
+    "description": "Write API documentation and clean up developer guides.",
+    "contact-info": "docs@somewhere.dev",
+    "tags": ["#documentation", "#tech-writing", "#api"]
+  },
+  {
+    "position": "Quantum Computing Intern @ QubitCore Labs",
+    "location": "Boston, MA",
+    "base-pay": "$50/hr",
+    "description": "Assist physicists in simulating qubit operations and error correction.",
+    "contact-info": "qc@somewhere.ai",
+    "tags": ["#quantum", "#research", "#physics"]
+  },
+  {
+    "position": "SaaS Support Intern @ CloudSync CRM",
+    "location": "Seattle, WA",
+    "base-pay": "$20/hr",
+    "description": "Help customers onboard and troubleshoot CRM platform features.",
+    "contact-info": "support@somewhere.crm",
+    "tags": ["#saas", "#support", "#crm"]
+  },
+  {
+    "position": "Environmental Data Intern @ EcoTrack Research",
+    "location": "Portland, OR",
+    "base-pay": "$23/hr",
+    "description": "Clean environmental datasets and build simple visualization reports.",
+    "contact-info": "eco@somewhere.org",
+    "tags": ["#environment", "#data", "#research"]
+  },
+  {
+    "position": "Network Engineering Intern @ LinkWave Telecom",
+    "location": "San Jose, CA",
+    "base-pay": "$32/hr",
+    "description": "Assist in configuring routers and monitoring traffic flows.",
+    "contact-info": "net@somewhere.dev",
+    "tags": ["#networking", "#engineering", "#infrastructure"]
+  },
+  {
+    "position": "Copywriting Intern @ BrandSpeak Agency",
+    "location": "Los Angeles, CA",
+    "base-pay": "$19/hr",
+    "description": "Write brand messaging, taglines, and social media content.",
+    "contact-info": "copy@somewhere.media",
+    "tags": ["#writing", "#marketing", "#branding"]
+  },
+  {
+    "position": "Kotlin Developer Intern @ MobileForge Apps",
+    "location": "Austin, TX",
+    "base-pay": "$38/hr",
+    "description": "Build Android features using Kotlin and assist with API integration.",
+    "contact-info": "android@somewhere.dev",
+    "tags": ["#kotlin", "#android", "#mobile"]
+  },
+  {
+    "position": "ML Ops Intern @ ModelFlow Systems",
+    "location": "San Francisco, CA",
+    "base-pay": "$41/hr",
+    "description": "Monitor ML training jobs and help optimize GPU resource usage.",
+    "contact-info": "mlops@somewhere.ai",
+    "tags": ["#mlops", "#ml", "#cloud"]
+  },
+  {
+    "position": "Game Art Intern @ ColorBurst Interactive",
+    "location": "Raleigh, NC",
+    "base-pay": "$24/hr",
+    "description": "Create 2D/3D assets and help the art team with environment designs.",
+    "contact-info": "art@somewhere.gg",
+    "tags": ["#game-art", "#3d", "#design"]
+  },
+  {
+    "position": "Mechanical CAD Intern @ ForgeWorks Engineering",
+    "location": "Detroit, MI",
+    "base-pay": "$27/hr",
+    "description": "Update engineering drawings and verify CAD model measurements.",
+    "contact-info": "cad@somewhere.engineer",
+    "tags": ["#cad", "#mechanical", "#design"]
+  },
+  {
+    "position": "Climate Research Intern @ EarthScope Institute",
+    "location": "Seattle, WA",
+    "base-pay": "$25/hr",
+    "description": "Analyze climate datasets and help produce environmental reports.",
+    "contact-info": "climate@somewhere.org",
+    "tags": ["#climate", "#research", "#environment"]
+  },
+  {
+    "position": "SQL Database Intern @ DataGrid Systems",
+    "location": "Chicago, IL",
+    "base-pay": "$31/hr",
+    "description": "Optimize SQL queries and monitor data pipelines.",
+    "contact-info": "sql@somewhere.dev",
+    "tags": ["#sql", "#database", "#backend"]
+  },
+  {
+    "position": "UI Animation Intern @ MotionStudio Creative",
+    "location": "Los Angeles, CA",
+    "base-pay": "$23/hr",
+    "description": "Create micro-interactions and UI animations using design tools.",
+    "contact-info": "motion@somewhere.design",
+    "tags": ["#animation", "#ui", "#design"]
+  },
+  {
+    "position": "IT Networking Intern @ ConnectSphere",
+    "location": "Phoenix, AZ",
+    "base-pay": "$21/hr",
+    "description": "Assist with network troubleshooting and hardware configuration.",
+    "contact-info": "network@somewhere.help",
+    "tags": ["#network", "#support", "#it"]
+  },
+  {
+    "position": "AI Model Evaluation Intern @ SynthAI Solutions",
+    "location": "Boston, MA",
+    "base-pay": "$38/hr",
+    "description": "Run evaluation pipelines and test model accuracy.",
+    "contact-info": "eval@somewhere.ai",
+    "tags": ["#ai", "#ml", "#evaluation"]
+  },
+  {
+    "position": "Supply Chain Analyst Intern @ FlowLine Logistics",
+    "location": "Dallas, TX",
+    "base-pay": "$27/hr",
+    "description": "Analyze supply chain performance and optimize shipment workflows.",
+    "contact-info": "supply@somewhere.biz",
+    "tags": ["#supply-chain", "#logistics", "#analysis"]
+  },
+  {
+    "position": "Content Editing Intern @ WordCraft Media",
+    "location": "Portland, OR",
+    "base-pay": "$18/hr",
+    "description": "Edit blog posts, correct grammar, and refine voice/tone.",
+    "contact-info": "edit@somewhere.news",
+    "tags": ["#editing", "#writing", "#content"]
+  },
+  {
+    "position": "AR Development Intern @ VisionLayer Labs",
+    "location": "San Jose, CA",
+    "base-pay": "$33/hr",
+    "description": "Build AR prototypes and test interactions using mobile devices.",
+    "contact-info": "ar@somewhere.gg",
+    "tags": ["#ar", "#unity", "#mobile"]
+  },
+  {
+    "position": "Scripting Intern @ AutoTask Automation",
+    "location": "Austin, TX",
+    "base-pay": "$28/hr",
+    "description": "Write scripts to automate workflows and maintain tooling scripts.",
+    "contact-info": "script@somewhere.dev",
+    "tags": ["#scripting", "#automation", "#python"]
+  },
+  {
+    "position": "Statistics Intern @ DataVision Research",
+    "location": "Chicago, IL",
+    "base-pay": "$29/hr",
+    "description": "Perform statistical tests and create model summaries.",
+    "contact-info": "stats@somewhere.io",
+    "tags": ["#statistics", "#data", "#analysis"]
+  },
+  {
+    "position": "Marketing Research Intern @ InsightLens Group",
+    "location": "Los Angeles, CA",
+    "base-pay": "$20/hr",
+    "description": "Conduct competitive analysis and compile research briefs.",
+    "contact-info": "research@somewhere.market",
+    "tags": ["#marketing", "#research", "#analysis"]
+  },
+  {
+    "position": "Python Developer Intern @ CodeStream Labs",
+    "location": "Seattle, WA",
+    "base-pay": "$34/hr",
+    "description": "Write backend scripts and assist with testing Python modules.",
+    "contact-info": "python@somewhere.dev",
+    "tags": ["#python", "#backend", "#development"]
+  },
+  {
+    "position": "Systems Analyst Intern @ InfraGrid IT",
+    "location": "Phoenix, AZ",
+    "base-pay": "$28/hr",
+    "description": "Support system documentation and help monitor infrastructure health.",
+    "contact-info": "sys@somewhere.help",
+    "tags": ["#systems", "#analysis", "#it"]
+  },
+  {
+    "position": "Audio Engineering Intern @ SoundByte Studio",
+    "location": "Nashville, TN",
+    "base-pay": "$20/hr",
+    "description": "Assist with audio mixing, editing, and sound design tasks.",
+    "contact-info": "audio@somewhere.media",
+    "tags": ["#audio", "#sound", "#engineering"]
+  },
+  {
+    "position": "Data Entry Intern @ InfoMatrix Global",
+    "location": "Houston, TX",
+    "base-pay": "$16/hr",
+    "description": "Input, verify, and clean up corporate datasets.",
+    "contact-info": "data@somewhere.org",
+    "tags": ["#data", "#entry", "#organization"]
+  },
+  {
+    "position": "React Developer Intern @ WebNova Interactive",
+    "location": "Denver, CO",
+    "base-pay": "$35/hr",
+    "description": "Build reusable React components and improve UI performance.",
+    "contact-info": "react@somewhere.dev",
+    "tags": ["#react", "#frontend", "#javascript"]
+  },
+  {
+    "position": "UI QA Intern @ PixelCheck Systems",
+    "location": "San Francisco, CA",
+    "base-pay": "$25/hr",
+    "description": "Test UI flows and document visual inconsistencies.",
+    "contact-info": "qa@somewhere.dev",
+    "tags": ["#qa", "#ui-testing", "#testing"]
+  },
+  {
+    "position": "Business Development Intern @ VentureBridge Partners",
+    "location": "New York, NY",
+    "base-pay": "$27/hr",
+    "description": "Assist with outreach, pitch decks, and partner research.",
+    "contact-info": "bd@somewhere.biz",
+    "tags": ["#business", "#sales", "#development"]
+  },
+  {
+    "position": "Genomics Data Intern @ BioData Solutions",
+    "location": "Seattle, WA",
+    "base-pay": "$27/hr",
+    "description": "Process raw genomic data and validate alignment results.",
+    "contact-info": "genomics@somewhere.bio",
+    "tags": ["#genomics", "#bioinformatics", "#data"]
+  },
+  {
+    "position": "Computer Vision Intern @ VisionAI Labs",
+    "location": "Boston, MA",
+    "base-pay": "$45/hr",
+    "description": "Build computer vision datasets and test detection algorithms.",
+    "contact-info": "cv@somewhere.ai",
+    "tags": ["#cv", "#ai", "#vision"]
+  },
+  {
+    "position": "Public Relations Intern @ BrightWave Agency",
+    "location": "Los Angeles, CA",
+    "base-pay": "$18/hr",
+    "description": "Draft PR messages and support press release planning.",
+    "contact-info": "pr@somewhere.media",
+    "tags": ["#pr", "#marketing", "#communication"]
+  },
+  {
+    "position": "Hardware Testing Intern @ CircuitCore Labs",
+    "location": "San Jose, CA",
+    "base-pay": "$29/hr",
+    "description": "Test prototype hardware boards and track bug reports.",
+    "contact-info": "hardware@somewhere.dev",
+    "tags": ["#hardware", "#testing", "#electronics"]
+  },
+  {
+    "position": "Software Support Intern @ AppAssist Mobile",
+    "location": "Seattle, WA",
+    "base-pay": "$19/hr",
+    "description": "Help users troubleshoot app glitches and report issues.",
+    "contact-info": "assist@somewhere.help",
+    "tags": ["#support", "#mobile", "#helpdesk"]
+  },
+  {
+    "position": "UX Prototyping Intern @ FlowDesign Studio",
+    "location": "Austin, TX",
+    "base-pay": "$26/hr",
+    "description": "Create interactive prototypes and test user flows.",
+    "contact-info": "proto@somewhere.design",
+    "tags": ["#ux", "#prototyping", "#ui"]
+  },
+  {
+    "position": "Digital Illustration Intern @ ArtStream Creative",
+    "location": "Portland, OR",
+    "base-pay": "$20/hr",
+    "description": "Produce illustrations and assist the art team with graphics.",
+    "contact-info": "art@somewhere.design",
+    "tags": ["#illustration", "#design", "#digital-art"]
+  },
+  {
+    "position": "API Development Intern @ CodePulse Technologies",
+    "location": "Denver, CO",
+    "base-pay": "$34/hr",
+    "description": "Help expand internal API endpoints and debug integrations.",
+    "contact-info": "api@somewhere.dev",
+    "tags": ["#api", "#backend", "#development"]
+  },
+  {
+    "position": "Economics Research Intern @ MarketScope Institute",
+    "location": "New York, NY",
+    "base-pay": "$26/hr",
+    "description": "Analyze market data and help prepare economic briefs.",
+    "contact-info": "econ@somewhere.edu",
+    "tags": ["#economics", "#research", "#analysis"]
+  },
+  {
+    "position": "AI Chatbot Developer Intern @ SmartDialog AI",
+    "location": "San Francisco, CA",
+    "base-pay": "$37/hr",
+    "description": "Develop chatbot flows and test multi-turn conversations.",
+    "contact-info": "bot@somewhere.ai",
+    "tags": ["#ai", "#chatbot", "#nlp"]
+  },
+  {
+    "position": "Event Planning Intern @ HorizonEvents Co.",
+    "location": "Miami, FL",
+    "base-pay": "$18/hr",
+    "description": "Coordinate event logistics and manage vendor communications.",
+    "contact-info": "events@somewhere.biz",
+    "tags": ["#events", "#planning", "#organization"]
+  },
+  {
+    "position": "NoSQL Database Intern @ CloudStore Systems",
+    "location": "Seattle, WA",
+    "base-pay": "$33/hr",
+    "description": "Manage NoSQL collections and assist with schema restructuring.",
+    "contact-info": "nosql@somewhere.dev",
+    "tags": ["#database", "#nosql", "#backend"]
+  },
+  {
+    "position": "Research Analyst Intern @ DataTrend Labs",
+    "location": "Chicago, IL",
+    "base-pay": "$28/hr",
+    "description": "Run survey analysis and help prepare insights decks.",
+    "contact-info": "analysis@somewhere.org",
+    "tags": ["#analysis", "#research", "#data"]
+  },
+  {
+    "position": "AI Fine-tuning Intern @ ModelTune AI",
+    "location": "Boston, MA",
+    "base-pay": "$44/hr",
+    "description": "Fine-tune medium-scale models with custom datasets.",
+    "contact-info": "tune@somewhere.ai",
+    "tags": ["#ai", "#ml", "#finetuning"]
+  },
+  {
+    "position": "Game QA Intern @ PlayTest Interactive",
+    "location": "Raleigh, NC",
+    "base-pay": "$21/hr",
+    "description": "Test gameplay features and report reproducible bugs.",
+    "contact-info": "qa@somewhere.gg",
+    "tags": ["#qa", "#gamedev", "#testing"]
+  },
+  {
+    "position": "Desktop Support Intern @ HelpDesk 24/7",
+    "location": "Phoenix, AZ",
+    "base-pay": "$19/hr",
+    "description": "Troubleshoot user issues and help install workstation tools.",
+    "contact-info": "desk@somewhere.help",
+    "tags": ["#support", "#it", "#hardware"]
+  },
+  {
+    "position": "Medical Writing Intern @ BioScript Communications",
+    "location": "San Diego, CA",
+    "base-pay": "$24/hr",
+    "description": "Write clinical summaries and assist with scientific documents.",
+    "contact-info": "write@somewhere.bio",
+    "tags": ["#writing", "#medical", "#research"]
+  },
+  {
+    "position": "Backend Python Intern @ CloudByte Systems",
+    "location": "Austin, TX",
+    "base-pay": "$37/hr",
+    "description": "Build microservices and write backend utilities using Python.",
+    "contact-info": "backend@somewhere.io",
+    "tags": ["#python", "#backend", "#cloud"]
+  },
+  {
+    "position": "Lab Technician Intern @ BioSphere Research",
+    "location": "Seattle, WA",
+    "base-pay": "$23/hr",
+    "description": "Prepare lab samples and assist researchers in daily lab tasks.",
+    "contact-info": "lab@somewhere.bio",
+    "tags": ["#lab", "#research", "#biotech"]
+  },
+  {
+    "position": "Cyber Forensics Intern @ TraceSecure Digital",
+    "location": "Houston, TX",
+    "base-pay": "$35/hr",
+    "description": "Assist in analyzing digital evidence and writing forensic reports.",
+    "contact-info": "forensics@somewhere.net",
+    "tags": ["#cybersecurity", "#forensics", "#analysis"]
+  },
+  {
+    "position": "Frontend UI Intern @ LimeLight Web Agency",
+    "location": "San Francisco, CA",
+    "base-pay": "$29/hr",
+    "description": "Improve UI components and help maintain style systems.",
+    "contact-info": "ui@somewhere.dev",
+    "tags": ["#frontend", "#ui", "#react"]
+  },
+  {
+    "position": "Cloud Reliability Intern @ SkyGuard Systems",
+    "location": "Seattle, WA",
+    "base-pay": "$36/hr",
+    "description": "Monitor cloud service uptime, assist with incident analysis, and review reliability reports.",
+    "contact-info": "reliability@somewhere.cloud",
+    "tags": ["#cloud", "#reliability", "#devops"]
+  },
+  {
+    "position": "AI Research Intern @ DeepVision Analytics",
+    "location": "New York, NY",
+    "base-pay": "$42/hr",
+    "description": "Run controlled experiments on vision models and support data preprocessing tasks.",
+    "contact-info": "research@somewhere.ai",
+    "tags": ["#ai", "#vision", "#research"]
   }
 ]

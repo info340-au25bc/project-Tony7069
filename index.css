@@ -12,7 +12,7 @@ html, body { /* do not remove the body, homepage layout needs it !!! */
 .login-signup {
   font-family: 'Georgia', sans-serif;
   /* background-color: #c2b9b9; */
-  background: linear-gradient(135deg, #6EE7B7 10%, #3B82F6 50%, #9333EA 100%);
+  background: linear-gradient(135deg, #86ffcf 10%, #8db9ff 30%, #ca90ff 60%, #f58282 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -251,7 +251,7 @@ input[type="password"] {
     justify-content: space-between;
 }
 
-.info-btn, .apply-btn {
+.save-btn, .apply-btn {
     border: none;
     padding: 1em 1em;
     border-radius: 0.7rem;
@@ -368,7 +368,7 @@ input[type="password"] {
     display: flex;
     align-items: center;      
     justify-content: center; 
-    /* min-height: 100vh;*/ /* I modified this part because I dont think we need a space between boxes -Tony */
+    min-height: 85vh;
     padding: 2rem;             
     background: transparent;
     flex: 1; /* I added this to let the position post section take all rest of the space - Tony */
