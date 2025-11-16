@@ -55,13 +55,13 @@ export function InputForm(props) {
             <form className="post-box" onSubmit={handlePost}>
 
                 <label className="label-position" htmlFor="position">Position</label>
-                <input id="position" type="text" name="position" placeholder="Position Title" />
+                <input id="position" type="text" name="position" placeholder="Position Title: Position @ Company" />
 
                 <label className="label-small" htmlFor="location">Location</label>
-                <input id="location" type="text" name="location" placeholder="Location" />
+                <input id="location" type="text" name="location" placeholder="Location: City, State" />
 
                 <label className="label-small" htmlFor="basepay">Base Pay</label>
-                <input id="basepay" type="text" name="basepay" placeholder="Base Pay" />
+                <input id="basepay" type="text" name="basepay" placeholder="Base Pay: $number/hr" />
 
                 <label className="label-small" htmlFor="body">Description</label>
                 <textarea id="body" name="body" className="body-textarea" />

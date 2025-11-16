@@ -30,7 +30,7 @@ function ButtonHamburger(props) {
     const navigate = useNavigate();
     return (
         <button onClick={() => navigate("/saved-posts")}>
-            HM
+            ≡
         </button>
     )
 }

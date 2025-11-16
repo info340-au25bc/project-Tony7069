@@ -1,4 +1,5 @@
-import opportunities from "../data/opportunities.json"
+// This JSON is AI generated. This JSON will be used solely for testing
+import opportunities from "../data/opportunities.json";
 import { useState } from "react";
 
 export default function HomePageBody(props) {
@@ -17,24 +18,42 @@ function CardContainer(props) {
         const basePay = opportunity["base-pay"];
         const contactInfo = opportunity["contact-info"];
         const allTags = tags.map((tag, innerIndex) => {
-            return <li key={index + innerIndex}>{ tag }</li>
+            return <span key={innerIndex}>{ tag }</span>
         });
 
-        const classNameAssignment = (index % 2) ? "scroll-box-green card" : "scroll-box-gray card";
+        const companyName = extraCompanyName(position);
+        const firstLetter = companyName.charAt(0).toUpperCase();
+        const colorStyle = colorCombiner(index);
 
         return (
-            <div key={index} className= {classNameAssignment}>
-                <h3>{ position }</h3>
-                <p><strong>Location:</strong> { location }</p>
-                <p><strong>Base Pay:</strong> { basePay }</p>
-                <p><strong>Description: </strong>{ description }</p>
-                <p><strong>Contact:</strong> { contactInfo }</p>
-                <ul className="tags">
-                    <p><strong>Tags:</strong></p>
-                    { allTags }
-                </ul>
+            <div key={index} className="intern-card">
+                <div className="card-header" style={colorStyle}>
+                    <div className="logo-circle">{firstLetter}</div>
+                </div>
+            
+                <div className="card-body">
+                    <h3 className="job-title">{position}</h3>
+
+                    <p className="location">
+                    Seattle, WA — <span className="pay">{basePay}</span>
+                    </p>
+
+                    <div className="description-box">
+                        <p className="description">{description}</p>
+                    </div>
+
+                    <p className="contact-info">contact info: {contactInfo}</p>
+
+                    <div className="tags">{allTags}</div>
+
+                    <div className="cards-buttons-container">
+                        <button className="info-btn">Info</button>
+                        <button className="apply-btn">Apply</button>
+                    </div>
+                </div>
             </div>
         )
+
     });
 
     return (
@@ -42,6 +61,28 @@ function CardContainer(props) {
             {allOpportunities}
         </div>
     );
+}
+
+function extraCompanyName(position) {
+    const index = position.indexOf("@");
+    if (index === -1) return "C";
+    return position.substring(index + 1).trim();
+}
+
+function colorCombiner(index) {
+    let colorOne = "#61ecabff";
+    if (index % 2 !== 0) {
+        colorOne = "#fff585ff";
+    }
+    let colorTwo = "#d4aefcff";
+    if (index % 3 !== 0) {
+        colorTwo = "#f8afafff";
+    }
+    let colorThree = "#a1cbffff";
+    if (index % 4 !== 0) {
+        colorThree = "#fcbee1ff";
+    }
+    return ({background: `linear-gradient(135deg, ${colorOne} 10%, ${colorTwo} 50%, ${colorThree} 100%)`})
 }
 
 

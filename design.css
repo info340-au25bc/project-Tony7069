@@ -1,0 +1,81 @@
+.intern-card {
+  width: 20rem;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1.2rem rgba(0,0,0,0.12);
+  font-family: "Inter", sans-serif;
+}
+
+/* Top section with gradient */
+.card-header {
+  height: 6em;
+  background: linear-gradient(180deg, #42a5ff, #1d75ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* The circle containing "T" */
+.logo-circle {
+  width: 2em;
+  height: 2em;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  font-weight: 600;
+  color: #1d75ff;
+}
+
+.card-body {
+  padding: 0.7rem 1rem 1rem;
+  text-align: left;
+}
+
+.job-title {
+  font-size: 1.5em;
+  margin-bottom: 0.2em;
+  margin-top: 0.2em;
+}
+
+.location, .description {
+  font-size: 0.9em;
+  margin-bottom: 0.7em;
+}
+
+.location .pay {
+  color: #1d75ff;
+  font-weight: 800;
+}
+
+.tags span {
+  font-size: 0.8em;
+  color: #1d75ff;
+  margin-right: 0.2em;
+}
+
+.cards-buttons-container {
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mail-btn, .apply-btn {
+  border: none;
+  padding: 1em 1em;
+  border-radius: 0.7rem;
+  font-size: 1em;
+  width: 5em;
+}
+
+.mail-btn {
+  background: #e8edff;
+  color: #1d75ff;
+}
+
+.apply-btn {
+  background: #1d75ff;
+  color: #ffffff;
+}
