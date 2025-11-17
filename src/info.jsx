@@ -36,7 +36,7 @@ function MainContent({detail}) {
 
                 <p className="job-contact"><b>Contact:</b> {contact}</p>
 
-                <p className="job-site"><strong>Official Site: </strong><a href={officalURL}>{officalURL}</a></p>
+                <p className="job-site"><strong>Official Site: </strong><a href={officalURL} target="_blank">{officalURL}</a></p>
 
                 <div className="job-tags">
                     {allTags}
