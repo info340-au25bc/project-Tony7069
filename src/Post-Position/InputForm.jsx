@@ -10,6 +10,8 @@ export function InputForm(props) {
         const description = event.target.body.value;
         const contactInfo = event.target.contact.value;
         const tags = parseTags(event.target.tags.value);
+        const officalURL = event.target.officialSite.value;
+        const img = "/office-img.png"; // TODO change this later
 
         const newOppotunityObject = {
             "position": position,
@@ -17,7 +19,9 @@ export function InputForm(props) {
             "base-pay": basePay,
             "description": description,
             "contact-info": contactInfo,
-            "tags": tags
+            "tags": tags,
+            "officalURL": officalURL,
+            "img": img
         }
 
         props.addToList(newOppotunityObject);
@@ -67,7 +71,10 @@ export function InputForm(props) {
                 <textarea id="body" name="body" className="body-textarea" />
 
                 <label className="label-small" htmlFor="contact">Contact-Info </label>
-                <textarea id="contact" name="contact" className="body-textarea" />
+                <input id="contact" type="text" name="contact" placeholder="Contact info..." />
+
+                <label className="label-small" htmlFor="official-site">Official Site</label>
+                <input id="official-site" type="text" name="officialSite" placeholder="Official website URL..." />
 
                 <div className="post-button-container">
                     <div className="left-actions">

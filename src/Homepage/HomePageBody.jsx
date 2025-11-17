@@ -1,6 +1,7 @@
 // This JSON is AI generated. This JSON will be used solely for testing
 import opportunities from "../data/opportunities.json";
 import { useState } from "react";
+import { useNavigate } from "react-router";
 
 export default function HomePageBody(props) {
     return (
@@ -11,6 +12,12 @@ export default function HomePageBody(props) {
 }
 
 function CardContainer(props) {
+    const navigate = useNavigate();
+
+    function handleClick(opportunity) {
+        navigate("/info", {state: opportunity});
+    }
+
     let combinedOpportunities = [...opportunities, ...(props.allAddedOpportunities || [])];
 
     // For the searching function
@@ -29,6 +36,8 @@ function CardContainer(props) {
         const {position, location, description, tags} = opportunity;
         const basePay = opportunity["base-pay"];
         const contactInfo = opportunity["contact-info"];
+        const img = opportunity["img"];
+        const officalURL = opportunity["officalURL"];
         const allTags = tags.map((tag, innerIndex) => {
             return <span key={innerIndex}>{ tag }</span>
         });
@@ -39,12 +48,12 @@ function CardContainer(props) {
 
         return (
             <div key={index} className="intern-card">
-                <div className="card-header" style={colorStyle}>
+                <div className="card-header" style={colorStyle} onClick={() => handleClick(opportunity)}>
                     <div className="logo-circle">{firstLetter}</div>
                 </div>
             
                 <div className="card-body">
-                    <h3 className="job-title">{position}</h3>
+                    <h3 className="job-title" onClick={() => handleClick(opportunity)}>{position}</h3>
 
                     <p className="location">
                     {location} — <span className="pay">{basePay}</span>
@@ -65,7 +74,6 @@ function CardContainer(props) {
                 </div>
             </div>
         )
-
     });
 
     return (
@@ -98,7 +106,7 @@ function colorCombiner(index) {
     if (index % 5 !== 0) {
         colorFour = "#ffcea1ff";
     }
-    
+
 
     return ({background: `linear-gradient(135deg, ${colorOne} 0%, ${colorTwo} 25%, ${colorThree} 50%, ${colorFour} 90%)`})
 }

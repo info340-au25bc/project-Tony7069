@@ -11,7 +11,7 @@ export function SpecialNav(props) {
                 <SearchBar />
                 <div className="post-home-button">
                     <a>
-                    <button onClick={() => navigate("/")}>Home</button>
+                    <button onClick={() => navigate("/homepage")}>Home</button>
                     </a>
                 </div>
             </div>

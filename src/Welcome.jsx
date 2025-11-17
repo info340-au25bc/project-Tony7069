@@ -5,7 +5,7 @@ export default function Welcome(props) {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate("/");
+        navigate("/homepage");
     }
 
     console.log(username);

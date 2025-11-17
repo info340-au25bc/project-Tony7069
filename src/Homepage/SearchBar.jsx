@@ -4,7 +4,7 @@ export function SearchBar(props) {
     const navigate = useNavigate();
 
     function handleSearch() {
-        navigate("/");
+        navigate("/homepage");
         props.search(event.target.value);
     }
 

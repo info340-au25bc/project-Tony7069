@@ -7,7 +7,7 @@ export default function Homepage(props) {
 
     function search(tag) {
         setEnteredTag(tag);
-        console.log(enteredTag);
+        // console.log(enteredTag);
     }
 
     return (

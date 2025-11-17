@@ -3,7 +3,6 @@ import { SpecialNav } from './Post-Position/SpecialNav.jsx';
 import { RecentActivitiesContentContainer } from './savedPosts/RecentActivitiesContentContainer.jsx';
 import users from "./data/users.json";
 import { useNavigate } from 'react-router';
-import { useEffect } from "react";
 
 export default function SavedPosts(props) {
   const navigate = useNavigate();

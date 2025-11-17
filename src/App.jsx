@@ -10,6 +10,7 @@ import PostPosition from './post-position.jsx';
 import LoginPage from './log-in-page.jsx';
 import SavedPosts from './saved-posts.jsx';
 import Welcome from './Welcome.jsx';
+import { InfoPage } from './info.jsx';
 
 export default function App() {
 
@@ -28,11 +29,12 @@ export default function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Homepage allAddedOpportunities={allAddedOpportunities}/>} />
+        <Route path="/homepage" element={<Homepage allAddedOpportunities={allAddedOpportunities}/>} />
         <Route path="/create-post" element={<EmptyPost />} />
         <Route path="/position" element={<PostPosition addToList={addToList}/>} />
-        <Route path="/login" element={<LoginPage alterCurrentUser={alterCurrentUser}/>} />
+        <Route index element={<LoginPage alterCurrentUser={alterCurrentUser}/>} />
         <Route path="/welcome" element={<Welcome username={currentUser} />} />
+        <Route path="/info" element={<InfoPage />} />
         <Route path="/saved-posts" element={<SavedPosts allAddedOpportunities={allAddedOpportunities} user={currentUser}/>} />
       </Routes>
 
