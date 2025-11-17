@@ -21,7 +21,7 @@ export default function App() {
 
   function alterCurrentUser(username) {
     setCurrentUser(username);
-    // console.log(username);
+    console.log(username);
   }
 
   return (
@@ -31,7 +31,7 @@ export default function App() {
         <Route path="/create-post" element={<EmptyPost />} />
         <Route path="/position" element={<PostPosition addToList={addToList}/>} />
         <Route path="/login" element={<LoginPage alterCurrentUser={alterCurrentUser}/>} />
-        <Route path="/saved-posts" element={<SavedPosts allAddedOpportunities={allAddedOpportunities}/>} />
+        <Route path="/saved-posts" element={<SavedPosts allAddedOpportunities={allAddedOpportunities} user={currentUser}/>} />
       </Routes>
 
       <footer>

@@ -94,7 +94,13 @@ function colorCombiner(index) {
     if (index % 4 !== 0) {
         colorThree = "#fcbee1ff";
     }
-    return ({background: `linear-gradient(135deg, ${colorOne} 10%, ${colorTwo} 50%, ${colorThree} 100%)`})
+    let colorFour = "#9acef1ff"
+    if (index % 5 !== 0) {
+        colorFour = "#ffcea1ff";
+    }
+    
+
+    return ({background: `linear-gradient(135deg, ${colorOne} 0%, ${colorTwo} 25%, ${colorThree} 50%, ${colorFour} 90%)`})
 }
 
 

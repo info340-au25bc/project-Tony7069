@@ -1,6 +1,5 @@
 import opportunities from "../data/opportunities.json";
 
-
 export function RecentActivitiesContentContainer(props) {
     // TODO: this part could be refactor: 
     const combinedOpportunities = [...opportunities, ...(props.allAddedOpportunities || [])];
@@ -13,10 +12,8 @@ export function RecentActivitiesContentContainer(props) {
             return <li key={index + innerIndex}>{ tag }</li>
         });
 
-        const classNameAssignment = (index % 2) ? "scroll-box-green card" : "scroll-box-gray card";
-
         return (
-            <div key={index} className= {classNameAssignment}>
+            <div key={index}>
                 <h3>{ position }</h3>
                 <p><strong>Location:</strong> { location }</p>
                 <p><strong>Base Pay:</strong> { basePay }</p>
