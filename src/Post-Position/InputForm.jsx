@@ -29,25 +29,19 @@ export function InputForm(props) {
 
     }
 
+    //modified to accept different tag formats
     function parseTags(tagString) {
-        const tags = [];
-        let currentTag = "";
-
-        for (let i = 0; i < tagString.length; i++) {
-            const char = tagString[i];
-            if (char === "#") {
-                if (currentTag.length > 0) {
-                    tags.push(currentTag);
-                }
-                currentTag = "#";
-            } else {
-                currentTag += char;
-            }
+        if (!tagString) return [];
+        const normalized = tagString.replace(/,/g, ' ').trim();
+        if (normalized.includes('#') && !/\s/.test(normalized)) {
+            const parts = normalized.split('#').map(p => p.trim()).filter(Boolean);
+            return parts.map(p => '#' + p.toLowerCase());
         }
-
-        if (currentTag.length > 0) {
-            tags.push(currentTag);
-        }
+        const parts = normalized.split(/\s+/).map(p => p.trim()).filter(Boolean);
+        const tags = parts.map(p => {
+            const t = p.replace(/^#/, '').toLowerCase();
+            return '#' + t;
+        });
 
         return tags;
     }

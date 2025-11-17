@@ -11,34 +11,36 @@ export default function HomePageBody(props) {
     );
 }
 
+//modified to include search functionality and improved filtering
 function CardContainer(props) {
-    const navigate = useNavigate();
-
-    function handleClick(opportunity) {
-        navigate("/info", {state: opportunity});
-    }
-
     let combinedOpportunities = [...opportunities, ...(props.allAddedOpportunities || [])];
 
-    // For the searching function
-    const filterTagFromSearch = props.enteredTag.toLowerCase();
-    if (filterTagFromSearch !== '') {
-        combinedOpportunities = combinedOpportunities.filter(opportunity => {
-            const tagsList = opportunity.tags;
+    const rawQuery = (props.enteredTag || '').trim();
+    const query = rawQuery.replace(/^#/, '').toLowerCase();
+    
+    const filteredOpportunities = useMemo(() => {
+        if (!query) return combinedOpportunities;
+
+        return combinedOpportunities.filter(opportunity => {
+            const tagsList = opportunity.tags || [];
             for (let i = 0; i < tagsList.length; i++) {
-                if (tagsList[i].toLowerCase() === '#' + filterTagFromSearch) return true;
+                const t = (tagsList[i] || '').toLowerCase().replace(/^#/, '');
+                if (t === query || t.includes(query)) return true;
             }
+            if (opportunity.position && opportunity.position.toLowerCase().includes(query)) return true;
+            if (opportunity.description && opportunity.description.toLowerCase().includes(query)) return true;
             return false;
         });
-    }
+    }, [combinedOpportunities, query]);
 
-    const allOpportunities = combinedOpportunities.map((opportunity, index) => {
+    const listToRender = filteredOpportunities;
+
+
+    const allOpportunities = listToRender.map((opportunity, index) => {
         const {position, location, description, tags} = opportunity;
         const basePay = opportunity["base-pay"];
         const contactInfo = opportunity["contact-info"];
-        const img = opportunity["img"];
-        const officalURL = opportunity["officalURL"];
-        const allTags = tags.map((tag, innerIndex) => {
+        const allTags = (tags || []).map((tag, innerIndex) => {
             return <span key={innerIndex}>{ tag }</span>
         });
 
@@ -48,12 +50,12 @@ function CardContainer(props) {
 
         return (
             <div key={index} className="intern-card">
-                <div className="card-header" style={colorStyle} onClick={() => handleClick(opportunity)}>
+                <div className="card-header" style={colorStyle}>
                     <div className="logo-circle">{firstLetter}</div>
                 </div>
             
                 <div className="card-body">
-                    <h3 className="job-title" onClick={() => handleClick(opportunity)}>{position}</h3>
+                    <h3 className="job-title">{position}</h3>
 
                     <p className="location">
                     {location} — <span className="pay">{basePay}</span>
@@ -74,6 +76,7 @@ function CardContainer(props) {
                 </div>
             </div>
         )
+
     });
 
     return (

@@ -37,12 +37,12 @@ function ButtonHamburger(props) {
 
 function SearchBar(props) {
     // control structure?
-    function handleSearch() {
+    function handleSearch(event) {
         props.search(event.target.value);
     }
 
     return (
-        <form className="search-bar">
+        <form className="search-bar" onSubmit={e => e.preventDefault()}>
             <input type="text" placeholder="Search..." onChange={handleSearch}/>
         </form>
     )
