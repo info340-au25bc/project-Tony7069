@@ -38,9 +38,7 @@ export default function LoginPage(props) {
     console.log("Loging Success");
     console.log("log in as " + userFound.username);
     props.alterCurrentUser(userFound.username);
-    navigate("/");
-
-
+    navigate("/welcome");
   }
 
   return (

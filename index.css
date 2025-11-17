@@ -78,6 +78,23 @@ input[type="password"] {
   font-size: 1.5rem;
 }
 
+/* WELCOME PAGE SECTION */
+.welcome-page {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #86ffcf 10%, #8db9ff 30%, #ca90ff 60%, #f58282 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.welcome-page h1 {
+    font-family: "Inter", sans-serif;;
+    font-size: 7rem;
+}
+
+
 /* HOMEPAGE SECTION: */
 .homepage {
     display: flex;
