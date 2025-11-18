@@ -1,6 +1,6 @@
 // This JSON is AI generated. This JSON will be used solely for testing
 import opportunities from "../data/opportunities.json";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useNavigate } from "react-router";
 
 export default function HomePageBody(props) {
