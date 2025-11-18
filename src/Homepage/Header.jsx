@@ -9,6 +9,7 @@ export function Header(props) {
                 <div className="homepage-nav-buttons">
                     <ButtonHamburger />
                     <ButtonAdd />
+                    <SwitchButton handleSwitch={props.handleSwitch} switchButtonDisplay={props.switchButtonDisplay}/>
                 </div>
                 <SearchBar search={props.search}/>   
             </div>
@@ -31,6 +32,14 @@ function ButtonHamburger(props) {
     return (
         <button onClick={() => navigate("/saved-posts")}>
             ≡
+        </button>
+    )
+}
+
+function SwitchButton(props) {
+    return (
+        <button onClick={props.handleSwitch}>
+            {props.switchButtonDisplay}
         </button>
     )
 }

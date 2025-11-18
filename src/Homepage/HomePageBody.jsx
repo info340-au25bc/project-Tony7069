@@ -1,45 +1,60 @@
 // This JSON is AI generated. This JSON will be used solely for testing
 import opportunities from "../data/opportunities.json";
-import { useState, useMemo } from "react";
+
+import { useState } from "react";
 import { useNavigate } from "react-router";
 
 export default function HomePageBody(props) {
     return (
         <section className="homepage-content">
-            <CardContainer allAddedOpportunities={props.allAddedOpportunities} enteredTag={props.enteredTag}/>
+            <CardContainer allAddedOpportunities={props.allAddedOpportunities} enteredTag={props.enteredTag} filterOrSearch={props.filterOrSearch}/>
         </section>
     );
 }
 
 //modified to include search functionality and improved filtering
 function CardContainer(props) {
+    const navigate = useNavigate();
+
+    function handleClick(opportunity) {
+        navigate("/info", {state: opportunity});
+    }
+
     let combinedOpportunities = [...opportunities, ...(props.allAddedOpportunities || [])];
 
-    const rawQuery = (props.enteredTag || '').trim();
-    const query = rawQuery.replace(/^#/, '').toLowerCase();
-    
-    const filteredOpportunities = useMemo(() => {
-        if (!query) return combinedOpportunities;
+    const rawInput = (props.enteredTag || '').trim();
+    const input = rawInput.replace(/^#/, '').toLowerCase();
 
-        return combinedOpportunities.filter(opportunity => {
-            const tagsList = opportunity.tags || [];
+    let filteredOpportunities = [];
+    if (props.filterOrSearch) {
+        // Searching based on keywords in title and description
+        filteredOpportunities = combinedOpportunities.filter(opportunity => {
+                if (opportunity.position.toLowerCase().includes(input)) return true;
+                if (opportunity.description.toLowerCase().includes(input)) return true;
+                return false;
+            });
+    } else {
+        // Searching based on tags
+        filteredOpportunities = combinedOpportunities.filter(opportunity => {
+            const tagsList = opportunity.tags;
             for (let i = 0; i < tagsList.length; i++) {
-                const t = (tagsList[i] || '').toLowerCase().replace(/^#/, '');
-                if (t === query || t.includes(query)) return true;
+                if (tagsList[i].toLowerCase() === '#' + input) return true;
             }
-            if (opportunity.position && opportunity.position.toLowerCase().includes(query)) return true;
-            if (opportunity.description && opportunity.description.toLowerCase().includes(query)) return true;
             return false;
         });
-    }, [combinedOpportunities, query]);
+    }
 
-    const listToRender = filteredOpportunities;
-
+    let listToRender = combinedOpportunities;
+    if (input !== '') {
+        listToRender = filteredOpportunities;
+    }
 
     const allOpportunities = listToRender.map((opportunity, index) => {
         const {position, location, description, tags} = opportunity;
         const basePay = opportunity["base-pay"];
         const contactInfo = opportunity["contact-info"];
+        // const img = opportunity["img"];
+        // const officalURL = opportunity["officalURL"];
         const allTags = (tags || []).map((tag, innerIndex) => {
             return <span key={innerIndex}>{ tag }</span>
         });
@@ -50,12 +65,12 @@ function CardContainer(props) {
 
         return (
             <div key={index} className="intern-card">
-                <div className="card-header" style={colorStyle}>
+                <div className="card-header" style={colorStyle} onClick={() => handleClick(opportunity)}>
                     <div className="logo-circle">{firstLetter}</div>
                 </div>
             
                 <div className="card-body">
-                    <h3 className="job-title">{position}</h3>
+                    <h3 className="job-title" onClick={() => handleClick(opportunity)}>{position}</h3>
 
                     <p className="location">
                     {location} — <span className="pay">{basePay}</span>
@@ -109,7 +124,6 @@ function colorCombiner(index) {
     if (index % 5 !== 0) {
         colorFour = "#ffcea1ff";
     }
-
 
     return ({background: `linear-gradient(135deg, ${colorOne} 0%, ${colorTwo} 25%, ${colorThree} 50%, ${colorFour} 90%)`})
 }
