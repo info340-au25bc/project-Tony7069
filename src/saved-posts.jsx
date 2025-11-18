@@ -25,7 +25,7 @@ export default function SavedPosts(props) {
           <img src={currentUser.img} alt="user image" />
         </div>
         <div className="sidebar-buttons-container">
-          <button><h2>Profile</h2></button>
+          <button onClick={() => navigate("/profile")}><h2>Profile</h2></button>
           <button><h2>Security & Privacy</h2></button>
           <button><h2>Tags</h2></button>
           <button><h2>Saved Post</h2></button>
