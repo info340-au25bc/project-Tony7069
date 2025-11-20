@@ -54,7 +54,7 @@ export default function EditTags(props) {
             </div>
 
             <div className="edit-profile-buttons">
-              <button type="submit" className="save-btn">Save Changes</button>
+              <button type="submit" className="profile-save-btn">Save Changes</button>
               <button type="button" className="cancel-btn" onClick={handleCancel}>Cancel</button>
             </div>
           </form>

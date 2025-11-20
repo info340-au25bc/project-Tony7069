@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SpecialNav } from './Post-Position/SpecialNav.jsx';
-import '../design.css';
 
 export default function EditProfile(props) {
   const navigate = useNavigate();
@@ -107,7 +106,7 @@ export default function EditProfile(props) {
             </div>
 
             <div className="edit-profile-buttons">
-              <button type="submit" className="save-btn">Save Changes</button>
+              <button type="submit" className="profile-save-btn">Save Changes</button>
               <button type="button" className="cancel-btn" onClick={handleCancel}>Cancel</button>
             </div>
           </form>
