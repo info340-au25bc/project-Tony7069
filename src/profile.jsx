@@ -1,34 +1,39 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SpecialNav } from './Post-Position/SpecialNav.jsx';
+import users from "./data/users.json";
 
 export default function Profile(props) {
   const navigate = useNavigate();
 
-  const user = {
-    email: 'Email@somewhere.com',
-    firstName: 'FirstName',
-    lastName: 'LastName',
-    preferredName: 'Preferred Name',
-    region: 'Region',
-    languages: 'Languages',
+  let user = {
+    email: 'Not logged in',
+    firstName: 'Not logged in',
+    lastName: '',
+    preferredName: '',
+    region: '',
+    languages: '',
   };
 
-  const userTags = [
-    '#Software Engineer',
-    '#Cyber-Security',
-    '#Some-other-tags...',
-    '#Some-other-tags...',
-    '#Some-other-tags...',
-  ];
+  if (props.currentUserData) {
+    user = {
+      email: props.currentUserData.email || 'N/A',
+      firstName: props.currentUserData.firstName || 'N/A',
+      lastName: props.currentUserData.lastName || 'N/A',
+      preferredName: props.currentUserData.preferredName || 'N/A',
+      region: props.currentUserData.region || 'N/A',
+      languages: props.currentUserData.languages || 'N/A',
+    };
+  }
+
+  const userTags = props.currentUserData?.userTags || [];
 
   const handleUpdateInfo = () => {
-    //todo: add
+    navigate('/edit-profile');
   };
 
   const handleUpdateTags = () => {
-    //todo: Navigate to add tags page
-    // navigate('/add-tags');
+    navigate('/edit-tags');
   };
 
   const handleBack = () => {

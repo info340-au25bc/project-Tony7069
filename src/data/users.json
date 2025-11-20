@@ -3,12 +3,22 @@
         "username": "Tony",
         "email": "xli56@uw.edu",
         "password": "tonyinfo340",
-        "img": "/tony.png"
+        "img": "/tony.png",
+        "firstName": "Tony",
+        "lastName": "Li",
+        "preferredName": "",
+        "region": "",
+        "languages": ""
     },
     {
         "username": "Thomas",
         "email": "tgus@uw.edu",
         "password": "thomasinfo340",
-        "img": "/thomas.png"
+        "img": "/thomas.png",
+        "firstName": "Thomas",
+        "lastName": "Gustafson",
+        "preferredName": "Thomas",
+        "region": "Seattle, WA",
+        "languages": "English"
     }
 ]
