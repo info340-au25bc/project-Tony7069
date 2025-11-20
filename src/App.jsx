@@ -12,18 +12,20 @@ import SavedPosts from './saved-posts.jsx';
 import Welcome from './Welcome.jsx';
 import { InfoPage } from './info.jsx';
 import Profile from './profile.jsx';
-import EditProfile from './EditProfile.jsx';
-import EditTags from './EditTags.jsx';
+import EditProfile from './profile/EditProfile.jsx';
+import EditTags from './profile/EditTags.jsx';
+import RequireLogin from './require-login.jsx';
 
 export default function App() {
 
   const [allAddedOpportunities, setAllAddedOpportunities] = useState([]);
-  const [currentUser, setCurrentUser] = useState('');
-  const [currentUserData, setCurrentUserData] = useState(null);
+  const [currentUser, setCurrentUser] = useState(''); 
+
+  // const [currentUserData, setCurrentUserData] = useState(null);
   const [editableUserData, setEditableUserData] = useState(null);
   function alterCurrentUser(username, userData) { 
     setCurrentUser(username);
-    setCurrentUserData(userData); 
+    // setCurrentUserData(userData); 
     setEditableUserData(userData);
     console.log(username);
   }
@@ -45,6 +47,7 @@ export default function App() {
         <Route path="/position" element={<PostPosition addToList={addToList}/>} />
         <Route index element={<LoginPage alterCurrentUser={alterCurrentUser}/>} />
         <Route path="/welcome" element={<Welcome username={currentUser} />} />
+        <Route path="/require-login" element={<RequireLogin />} />
         <Route path="/info" element={<InfoPage />} />
         <Route path="/profile" element={<Profile currentUserData={editableUserData} onUpdate={updateUserData} />} />
         <Route path="/edit-profile" element={<EditProfile currentUserData={editableUserData} onUpdate={updateUserData} />} />

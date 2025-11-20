@@ -14,6 +14,18 @@ export default function SavedPosts(props) {
     }
   }
 
+  //Remove this later:
+  let img = '/';
+  if (currentUser !== null) img = currentUser.img;
+
+  function handleClickOnProfile() {
+    if (currentUser === null) {
+      navigate('/require-login');
+    } else {
+      navigate("/profile")
+    }
+  }
+
   return (
     <div className="recent-activities-page">
       <section className="navbar">
@@ -22,10 +34,10 @@ export default function SavedPosts(props) {
 
       <section className="user-info-sidebar">
         <div className="user-image">
-          <img src={currentUser.img} alt="user image" />
+          <img src={img} alt="user image" />
         </div>
         <div className="sidebar-buttons-container">
-          <button onClick={() => navigate("/profile")}><h2>Profile</h2></button>
+          <button onClick={handleClickOnProfile}><h2>Profile</h2></button>
           <button><h2>Security & Privacy</h2></button>
           <button><h2>Tags</h2></button>
           <button><h2>Saved Post</h2></button>

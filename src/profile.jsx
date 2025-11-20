@@ -8,7 +8,7 @@ export default function Profile(props) {
 
   let user = {
     email: 'Not logged in',
-    firstName: 'Not logged in',
+    firstName: '',
     lastName: '',
     preferredName: '',
     region: '',
@@ -26,14 +26,34 @@ export default function Profile(props) {
     };
   }
 
-  const userTags = props.currentUserData?.userTags || [];
+  // let userTags = [];
+  // if (props.currentUserData) {
+  //   userTags = props.currentUserData.userTags;
+  // }
+
+  let userTags = props.currentUserData?.userTags || [];
+
+  const userTagsRenderList = userTags.map((tag, index) => {
+      return (
+        <h2 key={index}>{tag}</h2>
+      )
+  });
+                
 
   const handleUpdateInfo = () => {
-    navigate('/edit-profile');
+    if (user.email === 'Not logged in') {
+      navigate('/');
+    } else {
+      navigate('/edit-profile');
+    }
   };
 
   const handleUpdateTags = () => {
-    navigate('/edit-tags');
+    if (user.email === 'Not logged in') {
+      navigate('/');
+    } else {
+      navigate('/edit-tags');
+    }
   };
 
   const handleBack = () => {
@@ -57,11 +77,11 @@ export default function Profile(props) {
           <div className="profile-page-information-sections-container">
             <div className="profile-page-info-box">
               <h1 className="profile-page-boxes-titles">User Info</h1>
-              <h2>{user.email}</h2>
-              <h2>{user.firstName} {user.lastName}</h2>
-              <h2>{user.preferredName}</h2>
-              <h2>{user.region}</h2>
-              <h2>{user.languages}</h2>
+              <h2>Email: {user.email}</h2>
+              <h2>Name: {user.firstName} {user.lastName}</h2>
+              <h2>Preferred Name: {user.preferredName}</h2>
+              <h2>Region: {user.region}</h2>
+              <h2>Language: {user.languages}</h2>
               <button className="profile-page-button" onClick={handleUpdateInfo}>
                 <h2>Update Info</h2>
               </button>
@@ -69,9 +89,7 @@ export default function Profile(props) {
 
             <div className="profile-page-tags-box">
               <h1 className="profile-page-boxes-titles">Tags</h1>
-              {userTags.map((tag, index) => (
-                <h2 key={index}>{tag}</h2>
-              ))}
+              {userTagsRenderList}
               <button className="profile-page-button" onClick={handleUpdateTags}>
                 <h2>Update Info</h2>
               </button>

@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { SpecialNav } from './Post-Position/SpecialNav.jsx';
+import { SpecialNav } from '../Post-Position/SpecialNav.jsx';
 
 export default function EditProfile(props) {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    firstName: props.currentUserData?.firstName || '',
-    lastName: props.currentUserData?.lastName || '',
-    preferredName: props.currentUserData?.preferredName || '',
-    region: props.currentUserData?.region || '',
-    languages: props.currentUserData?.languages || '',
+    firstName: props.currentUserData.firstName || '',
+    lastName: props.currentUserData.lastName || '',
+    preferredName: props.currentUserData.preferredName || '',
+    region: props.currentUserData.region || '',
+    languages: props.currentUserData.languages || '',
   });
 
   const handleChange = (e) => {

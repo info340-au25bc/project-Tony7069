@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { SpecialNav } from './Post-Position/SpecialNav.jsx';
+import { SpecialNav } from '../Post-Position/SpecialNav.jsx';
 
 export default function EditTags(props) {
   const navigate = useNavigate();
