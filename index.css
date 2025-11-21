@@ -561,7 +561,6 @@ input[type="password"] {
   max-width: 70rem;
 }
 
-
 .profile-page-title-section-container {
   display: block;
   margin-bottom: 2em;
@@ -571,6 +570,7 @@ input[type="password"] {
   border-radius: 1rem;
   padding: 0.5em 0.5em;
   box-shadow: 0 0.4rem 1rem rgba(0,0,0,0.08);
+  background-color: white;
   width: fit-content;
 }
 
@@ -579,7 +579,7 @@ input[type="password"] {
   flex-direction: row;
   justify-content: flex-start;
   gap: 2em;
-  margin-left: 2em;
+  margin-left: 0.1em;
   margin-right: 2em;
   flex-wrap: nowrap;
 }
@@ -588,9 +588,12 @@ input[type="password"] {
 .profile-page-tags-box {
   background-color: #ffffff;
   border-radius: 1rem;
-  padding: 2em 3em;
-  width: 24rem;
+  padding: 1em;
+  width: 60rem;
   box-shadow: 0 0.4rem 1rem rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  height: 25em;
 }
 
 .profile-page-info-box h1,
@@ -610,17 +613,14 @@ input[type="password"] {
 }
 
 .profile-page-button {
-  background-color: #0b79f7;
-  color: #fff;
+  background-color: lightblue;
+  color: white;
   border: none;
   border-radius: 0.8rem;
   padding: 0.8rem 2rem;
-  margin-top: 1.5rem;
-  cursor: pointer;
+  margin-top: auto;
   font-size: 1.1rem;
   font-weight: 600;
-  transition: background-color 0.2s ease;
-  display: inline-block;
 }
 
 .profile-page-button:hover {

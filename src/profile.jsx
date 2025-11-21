@@ -96,11 +96,10 @@ export default function Profile(props) {
             </div>
           </div>
 
-          <button className="profile-page-button" onClick={handleBack}>
-            back
-          </button>
+
         </div>
       </section>
+      <button className="profile-page-button" onClick={handleBack}>back</button>
     </div>
   );
 }
