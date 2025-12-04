@@ -1,17 +1,24 @@
 import { useState } from "react";
-import users from "./data/users.json";
+// import users from "./data/users.json";
 import { useNavigate } from "react-router-dom";
+import { getDatabase, ref, get } from "firebase/database";
 
 export default function LoginPage(props) {
+  const db = getDatabase();
+  const reference = ref(db, "Users");
+
+
   const navigate = useNavigate();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  function handleLogin(event) {
+  async function handleLogin(event) {
     event.preventDefault();
     // setEmail(event.target.email.value);
     // setPassword(event.target.password.value);
+    const snapshot = await get(reference);
+    const users = Object.values(snapshot.val());
 
     let userFound = null;
     for (let i = 0; i < users.length; i++) {
@@ -23,6 +30,7 @@ export default function LoginPage(props) {
 
     if (userFound === null) {
       console.log("User not found");
+      alert("User not found");
       setEmail('');
       setPassword('');
       return;
@@ -30,6 +38,7 @@ export default function LoginPage(props) {
 
     if (userFound.password !== password) {
       console.log("Incorrect password");
+      alter("Incorrect password");
       setEmail('');
       setPassword('');
       return;

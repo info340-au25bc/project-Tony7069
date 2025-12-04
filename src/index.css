@@ -722,3 +722,8 @@ input[type="password"] {
     font-weight: 500;
 }
 
+/* SIGNUP PAGE SECTION */
+.firstname-lastname-input-container {
+    display: flex;
+    gap: 1rem;
+}

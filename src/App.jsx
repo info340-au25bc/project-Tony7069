@@ -16,6 +16,7 @@ import EditProfile from './profile/EditProfile.jsx';
 import EditTags from './profile/EditTags.jsx';
 import RequireLogin from './require-login.jsx';
 import UnderConstruction from './underconstruction.jsx';
+import SignupPage from './Registration.jsx';
 
 import { getDatabase, ref, get } from 'firebase/database';
 
@@ -65,6 +66,7 @@ export default function App() {
         <Route path="/edit-tags" element={<EditTags currentUserData={editableUserData} onUpdate={updateUserData} />} />
         <Route path="/saved-posts" element={<SavedPosts user={currentUser}/>} />
         <Route path="/underconstruction" element={<UnderConstruction />} />
+        <Route path="/signup" element={<SignupPage />} />
       </Routes>
 
       <footer>

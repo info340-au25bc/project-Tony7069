@@ -1,0 +1,523 @@
+{
+  "Opportunities": [
+    {
+      "position": "Software Intern @ TechNova Labs",
+      "location": "Seattle, WA",
+      "base-pay": "$32/hr",
+      "description": "Assist with feature development and debugging on internal tools.",
+      "contact-info": "recruit@somewhere.com",
+      "tags": [
+        "#software",
+        "#internship",
+        "#fullstack"
+      ],
+      "img": "/office-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "Business Analyst Internship @ DataBridge Consulting",
+      "location": "New York, NY",
+      "base-pay": "$28/hr",
+      "description": "Analyze client datasets and assist in strategy reports.",
+      "contact-info": "apply@somewhere.net",
+      "tags": [
+        "#business",
+        "#analytics",
+        "#consulting"
+      ],
+      "img": "/company-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "Marketing Assistant @ BluePeak Media",
+      "location": "Los Angeles, CA",
+      "base-pay": "$20/hr",
+      "description": "Help manage social media campaigns and track engagement metrics.",
+      "contact-info": "jobs@somewhere.com",
+      "tags": [
+        "#marketing",
+        "#social-media",
+        "#content"
+      ],
+      "img": "/cafe-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "Research Intern @ UW Bioinformatics Lab",
+      "location": "Seattle, WA",
+      "base-pay": "$18/hr",
+      "description": "Assist PhD students with genomic data preprocessing and visualization.",
+      "contact-info": "lab-admin@somewhere.edu",
+      "tags": [
+        "#research",
+        "#bioinformatics",
+        "#genomics"
+      ],
+      "img": "/office-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "Frontend React Intern @ PixelForge Studio",
+      "location": "Austin, TX",
+      "base-pay": "$35/hr",
+      "description": "Implement UI components and assist with design refinements.",
+      "contact-info": "careers@somewhere.com",
+      "tags": [
+        "#react",
+        "#frontend",
+        "#javascript"
+      ],
+      "img": "/company-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "Machine Learning Intern @ DeepThink AI",
+      "location": "San Francisco, CA",
+      "base-pay": "$40/hr",
+      "description": "Build small prototypes using existing models and datasets.",
+      "contact-info": "hr@somewhere.ai",
+      "tags": [
+        "#machine-learning",
+        "#python",
+        "#ai"
+      ],
+      "img": "/cafe-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "Software QA Tester @ StreamWorks Entertainment",
+      "location": "Atlanta, GA",
+      "base-pay": "$22/hr",
+      "description": "Test new features on multiple platforms and report bugs.",
+      "contact-info": "qa@somewhere.com",
+      "tags": [
+        "#qa",
+        "#testing",
+        "#bug-reporting"
+      ],
+      "img": "/office-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "Project Coordinator @ Horizon EdTech",
+      "location": "Denver, CO",
+      "base-pay": "$30/hr",
+      "description": "Assist PM with agile tracking, sprint notes, and task distribution.",
+      "contact-info": "pm@somewhere.org",
+      "tags": [
+        "#project-management",
+        "#agile",
+        "#coordination"
+      ],
+      "img": "/company-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "Product Management Intern @ CloudCompass Software",
+      "location": "Boston, MA",
+      "base-pay": "$45/hr",
+      "description": "Help write PRDs and coordinate with design and engineering teams.",
+      "contact-info": "recruit@somewhere.io",
+      "tags": [
+        "#product-management",
+        "#pm",
+        "#cross-functional"
+      ],
+      "img": "/cafe-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "Sales Development Rep @ Pioneer Robotics",
+      "location": "Chicago, IL",
+      "base-pay": "$25/hr",
+      "description": "Handle warm outreach to leads and help organize demos.",
+      "contact-info": "sales@somewhere.com",
+      "tags": [
+        "#sales",
+        "#outreach",
+        "#crm"
+      ],
+      "img": "/office-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "Support Engineer Intern @ NeonNetwork Infrastructure",
+      "location": "San Jose, CA",
+      "base-pay": "$33/hr",
+      "description": "Handle minor troubleshooting and assist senior engineers.",
+      "contact-info": "support@somewhere.dev",
+      "tags": [
+        "#support",
+        "#troubleshooting",
+        "#network"
+      ],
+      "img": "/company-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "Content Writer @ InsightEdge News",
+      "location": "Portland, OR",
+      "base-pay": "$21/hr",
+      "description": "Write weekly content summaries and publish articles.",
+      "contact-info": "editor@somewhere.news",
+      "tags": [
+        "#writing",
+        "#content",
+        "#editorial"
+      ],
+      "img": "/cafe-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "Cybersecurity Intern @ ShieldMatrix Defense",
+      "location": "Houston, TX",
+      "base-pay": "$34/hr",
+      "description": "Assist cybersecurity analysts with threat detection reports and vulnerability scans.",
+      "contact-info": "security@somewhere.net",
+      "tags": [
+        "#cybersecurity",
+        "#infosec",
+        "#threat-analysis"
+      ],
+      "img": "/office-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "UI/UX Design Intern @ CanvasFlow Studio",
+      "location": "Seattle, WA",
+      "base-pay": "$27/hr",
+      "description": "Create wireframes and mockups for new product experiences.",
+      "contact-info": "design@somewhere.com",
+      "tags": [
+        "#uiux",
+        "#design",
+        "#figma"
+      ],
+      "img": "/company-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "Data Science Intern @ NovaQuant Analytics",
+      "location": "San Francisco, CA",
+      "base-pay": "$42/hr",
+      "description": "Help build predictive models and analyze customer datasets.",
+      "contact-info": "ds@somewhere.ai",
+      "tags": [
+        "#data-science",
+        "#python",
+        "#ml"
+      ],
+      "img": "/cafe-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "Operations Assistant @ RapidShip Logistics",
+      "location": "Dallas, TX",
+      "base-pay": "$19/hr",
+      "description": "Coordinate shipping schedules and assist with inventory updates.",
+      "contact-info": "ops@somewhere.org",
+      "tags": [
+        "#operations",
+        "#logistics",
+        "#supply-chain"
+      ],
+      "img": "/office-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "Video Editing Intern @ BrightPixel Media",
+      "location": "Los Angeles, CA",
+      "base-pay": "$20/hr",
+      "description": "Edit short-form video content for client campaigns.",
+      "contact-info": "media@somewhere.tv",
+      "tags": [
+        "#video-editing",
+        "#premiere",
+        "#after-effects"
+      ],
+      "img": "/company-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "Cloud Engineering Intern @ SkyBridge Cloud Systems",
+      "location": "Austin, TX",
+      "base-pay": "$38/hr",
+      "description": "Assist in configuring cloud infrastructure and writing deployment scripts.",
+      "contact-info": "cloud@somewhere.dev",
+      "tags": [
+        "#cloud",
+        "#aws",
+        "#devops"
+      ],
+      "img": "/cafe-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "Financial Analyst Intern @ SummitPeak Capital",
+      "location": "New York, NY",
+      "base-pay": "$30/hr",
+      "description": "Analyze financial statements and help prepare market insights.",
+      "contact-info": "finance@somewhere.com",
+      "tags": [
+        "#finance",
+        "#analysis",
+        "#investing"
+      ],
+      "img": "/office-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "IT Support Intern @ ByteCare Solutions",
+      "location": "Phoenix, AZ",
+      "base-pay": "$18/hr",
+      "description": "Help troubleshoot internal software issues and manage user requests.",
+      "contact-info": "support@somewhere.help",
+      "tags": [
+        "#it",
+        "#support",
+        "#helpdesk"
+      ],
+      "img": "/company-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "Backend Engineer Intern @ CodeFusion Labs",
+      "location": "San Diego, CA",
+      "base-pay": "$36/hr",
+      "description": "Assist with API development and performance optimization.",
+      "contact-info": "backend@somewhere.dev",
+      "tags": [
+        "#backend",
+        "#nodejs",
+        "#api"
+      ],
+      "img": "/cafe-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "Product Design Intern @ NovaUX Collective",
+      "location": "Portland, OR",
+      "base-pay": "$29/hr",
+      "description": "Support senior designers by creating component libraries and prototypes.",
+      "contact-info": "ux@somewhere.design",
+      "tags": [
+        "#design",
+        "#uiux",
+        "#prototyping"
+      ],
+      "img": "/office-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "Data Engineering Intern @ BigStream DataWorks",
+      "location": "Chicago, IL",
+      "base-pay": "$40/hr",
+      "description": "Build ETL pipelines and assist in maintaining data warehouse systems.",
+      "contact-info": "de@somewhere.io",
+      "tags": [
+        "#data-engineering",
+        "#etl",
+        "#sql"
+      ],
+      "img": "/company-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "Gameplay Developer Intern @ PixelWorks Interactive",
+      "location": "Raleigh, NC",
+      "base-pay": "$33/hr",
+      "description": "Implement gameplay mechanics and debug UI interactions.",
+      "contact-info": "games@somewhere.gg",
+      "tags": [
+        "#gamedev",
+        "#unity",
+        "#csharp"
+      ],
+      "img": "/cafe-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "Biotech Research Assistant @ GenomePath Labs",
+      "location": "San Francisco, CA",
+      "base-pay": "$26/hr",
+      "description": "Assist in wet lab experiments and genomic data documentation.",
+      "contact-info": "bio@somewhere.bio",
+      "tags": [
+        "#biotech",
+        "#genomics",
+        "#research"
+      ],
+      "img": "/office-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "HR Recruiting Intern @ PeopleFirst Talent Group",
+      "location": "Miami, FL",
+      "base-pay": "$21/hr",
+      "description": "Screen resumes and coordinate candidate interviews.",
+      "contact-info": "hr@somewhere.jobs",
+      "tags": [
+        "#hr",
+        "#recruiting",
+        "#talent"
+      ],
+      "img": "/company-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "AI Research Intern @ QuantumForge AI",
+      "location": "Boston, MA",
+      "base-pay": "$48/hr",
+      "description": "Assist in training models and writing research drafts on model efficiency.",
+      "contact-info": "research@somewhere.ai",
+      "tags": [
+        "#ai",
+        "#research",
+        "#ml"
+      ],
+      "img": "/cafe-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "Environmental Analyst Intern @ GreenGrid Sustainability",
+      "location": "Seattle, WA",
+      "base-pay": "$24/hr",
+      "description": "Collect environmental data and help draft sustainability reports.",
+      "contact-info": "eco@somewhere.org",
+      "tags": [
+        "#environment",
+        "#sustainability",
+        "#analysis"
+      ],
+      "img": "/office-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "Mobile App Developer Intern @ AppCraft Studios",
+      "location": "Denver, CO",
+      "base-pay": "$34/hr",
+      "description": "Build mobile components and fix UI responsiveness issues.",
+      "contact-info": "apps@somewhere.dev",
+      "tags": [
+        "#mobile",
+        "#react-native",
+        "#ios"
+      ],
+      "img": "/company-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "Social Media Intern @ WaveReach Marketing",
+      "location": "Los Angeles, CA",
+      "base-pay": "$19/hr",
+      "description": "Schedule posts, create captions, and analyze engagement performance.",
+      "contact-info": "media@somewhere.social",
+      "tags": [
+        "#social-media",
+        "#content",
+        "#marketing"
+      ],
+      "img": "/cafe-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "CAD Design Intern @ BuildCore Engineering",
+      "location": "Detroit, MI",
+      "base-pay": "$28/hr",
+      "description": "Assist mechanical engineers by updating CAD models and drawings.",
+      "contact-info": "cad@somewhere.me",
+      "tags": [
+        "#cad",
+        "#engineering",
+        "#solidworks"
+      ],
+      "img": "/office-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "Data Visualization Intern @ GraphIQ Insights",
+      "location": "San Jose, CA",
+      "base-pay": "$32/hr",
+      "description": "Create dashboards and data visuals using BI tools.",
+      "contact-info": "viz@somewhere.io",
+      "tags": [
+        "#data-viz",
+        "#tableau",
+        "#dashboards"
+      ],
+      "img": "/company-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    },
+    {
+      "position": "Robotics Intern @ MotionCore Robotics",
+      "location": "Pittsburgh, PA",
+      "base-pay": "$31/hr",
+      "description": "Assist in testing robotic arm algorithms and performing calibration tasks.",
+      "contact-info": "robotics@somewhere.ai",
+      "tags": [
+        "#robotics",
+        "#automation",
+        "#testing"
+      ],
+      "img": "/cafe-img.png",
+      "officalURL": "https://www.linkedin.com/home",
+      "saved": false
+    }
+  ],
+  "Users": [
+    {
+        "username": "Tony",
+        "email": "xli56@uw.edu",
+        "password": "tonyinfo340",
+        "img": "/tony.png",
+        "firstName": "Tony",
+        "lastName": "Li",
+        "preferredName": "",
+        "region": "",
+        "languages": ""
+    },
+    {
+        "username": "Thomas",
+        "email": "tgus@uw.edu",
+        "password": "thomasinfo340",
+        "img": "/thomas.png",
+        "firstName": "Thomas",
+        "lastName": "Gustafson",
+        "preferredName": "Thomas",
+        "region": "Seattle, WA",
+        "languages": "English"
+    }
+  ]
+}
