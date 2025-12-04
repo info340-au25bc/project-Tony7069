@@ -1,19 +1,19 @@
-import React from "react"; // changed to ensure React is in scope for JSX
+import { useNavigate } from "react-router-dom";
 
 import { getDatabase, ref, set } from "firebase/database";
 
 
 export function SearchBar(props) {
-    function handleChange(e) {
-        if (typeof props.search === 'function') props.search(e.target.value); // call parent search prop with input value
+    const navigate = useNavigate();
+
+    function handleSearch() {
+        navigate("/homepage");
+        props.search(event.target.value);
     }
 
     return (
-        <>
-            {/* prevent default submit so page doesnt reload */}
-            <form className="search-bar" onSubmit={(e) => e.preventDefault()}>
-                <input type="text" placeholder="Search..." onChange={handleChange} />{/* fixed to call handleChange on input */}
-            </form>
-        </>
-    );
+        <form className="search-bar">
+            <input type="text" placeholder="Search..." onChange={handleSearch}/>
+        </form>
+    )
 }

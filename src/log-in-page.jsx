@@ -53,14 +53,13 @@ export default function LoginPage(props) {
       <div className="input-container">
         <div className="input-container-content">
           <h2>Internshipper</h2>
-          {/* use an onSubmit so enter key submits the form */}
-          <form onSubmit={handleLogin}>
+          <form>
             <input type="email" placeholder="email..." required value={email} onChange={(event) => setEmail(event.target.value)}/>
             <input type="password" placeholder="password..." required value={password} onChange={(event) => setPassword(event.target.value)}/>
 
             <div className="login-page-buttons">
-              <button type="submit" className="login">Log In</button>{/* fix submit button */}
-              <button type="button" className="signup" onClick={() => navigate('/register')}>Sign Up</button>{/* navigate to register page */}
+              <button type="button" className="login" onClick={handleLogin}>Log In</button>
+              <button type="button" className="signup">Sign Up</button>
             </div>
           </form>
         </div>
