@@ -1,6 +1,10 @@
 import { useNavigate } from "react-router-dom";
 
+import { getDatabase, ref, set as firebaseSet, push } from "firebase/database";
+
 export function InputForm(props) {
+    const db = getDatabase();
+    const reference = ref(db, "Opportunities");
 
     const handlePost = (event) => {
         event.preventDefault();
@@ -21,10 +25,10 @@ export function InputForm(props) {
             "contact-info": contactInfo,
             "tags": tags,
             "officalURL": officalURL,
-            "img": img
+            "img": img,
+            "saved": false
         }
-
-        props.addToList(newOppotunityObject);
+        push(reference, newOppotunityObject);
         event.target.reset();
 
     }

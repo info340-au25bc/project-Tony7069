@@ -1,10 +1,30 @@
 import opportunities from "../data/opportunities.json";
+import { getDatabase, ref, set as firebaseSet, get, onValue } from "firebase/database"
+import { useState, useEffect } from "react";
+
+
 
 export function RecentActivitiesContentContainer(props) {
     // TODO: this part could be refactor: 
-    const combinedOpportunities = [...opportunities, ...(props.allAddedOpportunities || [])];
+    const [combinedOpportunities, setCombinedOpportunities] = useState([]);
+    useEffect(() => {
+        const db = getDatabase();
+        const reference = ref(db, "Opportunities");
+        const forCleanup = onValue(reference, snapshot => {
+            const objectData = snapshot.val();
 
-    const allOpportunities = combinedOpportunities.map((opportunity, index) => {
+            const arrayData = Object.values(objectData);
+            setCombinedOpportunities(arrayData);
+        });
+        return () => forCleanup();
+    }, []);
+
+    const savedOpportunities = combinedOpportunities.filter(opportunity => {
+        if (opportunity.saved === "true") return true;
+        return false;
+    });
+
+    const allOpportunities = savedOpportunities.map((opportunity, index) => {
         const {position, location, description, tags} = opportunity;
         const basePay = opportunity["base-pay"];
         const contactInfo = opportunity["contact-info"];
@@ -13,24 +33,33 @@ export function RecentActivitiesContentContainer(props) {
         });
 
         return (
-            <div key={index}>
-                <h3>{ position }</h3>
-                <p><strong>Location:</strong> { location }</p>
-                <p><strong>Base Pay:</strong> { basePay }</p>
-                <p><strong>Description: </strong>{ description }</p>
-                <p><strong>Contact:</strong> { contactInfo }</p>
-                <ul className="tags">
-                    <p><strong>Tags:</strong></p>
-                    { allTags }
-                </ul>
+            <div className="saved-card" key={index}>
+                <div className="saved-card-content">
+                    <h3 className="saved-title">{ position }</h3>
+                    <p className="saved-meta"><strong>Location:</strong> { location }</p>
+                    <p className="saved-meta"><strong>Base Pay:</strong> { basePay }</p>
+
+                    <p className="saved-description">
+                        <strong>Description: </strong>{ description }
+                    </p>
+
+                    <p className="saved-meta"><strong>Contact:</strong> { contactInfo }</p>
+
+                    <div className="saved-tags-wrapper">
+                        <p className="saved-tags-label"><strong>Tags:</strong></p>
+                        <ul className="saved-tags">{ allTags }</ul>
+                    </div>
+                </div>
             </div>
-        )
+        );
     });
 
     return (
         <section className="recent-activities-content-container">
             <h1>Saved Posts</h1>
-            {allOpportunities}
+            <div className="saved-cards-grid">
+                {allOpportunities}
+            </div>
         </section>
     );
 }

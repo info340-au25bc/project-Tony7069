@@ -1,13 +1,15 @@
 // This JSON is AI generated. This JSON will be used solely for testing
 import opportunities from "../data/opportunities.json";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
+
+import { getDatabase, ref, set as firebaseSet, get, onValue } from "firebase/database"
 
 export default function HomePageBody(props) {
     return (
         <section className="homepage-content">
-            <CardContainer allAddedOpportunities={props.allAddedOpportunities} enteredTag={props.enteredTag} filterOrSearch={props.filterOrSearch}/>
+            <CardContainer enteredTag={props.enteredTag} filterOrSearch={props.filterOrSearch}/>
         </section>
     );
 }
@@ -15,12 +17,24 @@ export default function HomePageBody(props) {
 //modified to include search functionality and improved filtering
 function CardContainer(props) {
     const navigate = useNavigate();
+    const db = getDatabase();
+    const reference = ref(db, "Opportunities");
 
     function handleClick(opportunity) {
         navigate("/info", {state: opportunity});
     }
 
-    let combinedOpportunities = [...opportunities, ...(props.allAddedOpportunities || [])];
+    const [combinedOpportunities, setCombinedOpportunities] = useState([]);
+    useEffect(() => {
+
+        const forCleanup = onValue(reference, snapshot => {
+            const objectData = snapshot.val();
+
+            const arrayData = Object.values(objectData);
+            setCombinedOpportunities(arrayData);
+        });
+        return () => forCleanup();
+    }, []);
 
     const rawInput = (props.enteredTag || '').trim();
     const input = rawInput.replace(/^#/, '').toLowerCase();
@@ -50,7 +64,7 @@ function CardContainer(props) {
     }
 
     const allOpportunities = listToRender.map((opportunity, index) => {
-        const {position, location, description, tags} = opportunity;
+        const {position, location, description, tags, officalURL} = opportunity;
         const basePay = opportunity["base-pay"];
         const contactInfo = opportunity["contact-info"];
         // const img = opportunity["img"];
@@ -63,35 +77,52 @@ function CardContainer(props) {
         const firstLetter = companyName.charAt(0).toUpperCase();
         const colorStyle = colorCombiner(index);
 
+        // FOr save button functionailty
+        const saved = opportunity.saved === "true";
+        let colorOfButton = "save-btn-blue";
+        let buttonLabel = "Saved";
+        if (saved) {
+            buttonLabel = "Unsaved";
+            colorOfButton = "save-btn-gray";
+        }
+
+        function handleSaved() {
+            const newArray = [...combinedOpportunities];
+            if (newArray[index].saved === "true") {
+                newArray[index].saved = "false";
+            } else {
+                newArray[index].saved = "true";
+            }
+            firebaseSet(reference, newArray);
+        }
+
         return (
             <div key={index} className="intern-card">
                 <div className="card-header" style={colorStyle} onClick={() => handleClick(opportunity)}>
                     <div className="logo-circle">{firstLetter}</div>
                 </div>
-            
                 <div className="card-body">
                     <h3 className="job-title" onClick={() => handleClick(opportunity)}>{position}</h3>
-
                     <p className="location">
-                    {location} — <span className="pay">{basePay}</span>
+                        {location} — <span className="pay">{basePay}</span>
                     </p>
-
                     <div className="description-box">
                         <p className="description">{description}</p>
                     </div>
-
                     <p className="contact-info">contact info: {contactInfo}</p>
-
                     <div className="tags">{allTags}</div>
-
                     <div className="cards-buttons-container">
-                        <button className="save-btn">Save</button>
-                        <button className="apply-btn">Apply</button>
+                        <button className={colorOfButton} type="button" onClick={handleSaved}>
+                            {buttonLabel}
+                        </button>
+                        <a href={officalURL} target="_blank" rel="noopener noreferrer">
+                            <button className="apply-btn">Apply</button>
+                        </a>
+
                     </div>
                 </div>
             </div>
         )
-
     });
 
     return (

@@ -22,10 +22,12 @@ export default function Homepage(props) {
         // console.log(enteredTag);
     }
 
+    // console.log("app" + props.currentUser);
+
     return (
         <div className="homepage">
-            <Header search={search} handleSwitch={handleSwitch} switchButtonDisplay={switchButtonDisplay}/>
-            <HomePageBody allAddedOpportunities={props.allAddedOpportunities} enteredTag={enteredTag} filterOrSearch={filterOrSearch} />
+            <Header currentUser={props.currentUser} search={search} filterOrSearch={filterOrSearch} handleSwitch={handleSwitch} switchButtonDisplay={switchButtonDisplay}/>
+            <HomePageBody enteredTag={enteredTag} filterOrSearch={filterOrSearch} />
         </div>
     )
 }

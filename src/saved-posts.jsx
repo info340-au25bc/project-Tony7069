@@ -32,7 +32,7 @@ export default function SavedPosts(props) {
         <SpecialNav/>
       </section>
 
-      <section className="user-info-sidebar">
+      {/* <section className="user-info-sidebar">
         <div className="user-image">
           <img src={img} alt="user image" />
         </div>
@@ -43,7 +43,7 @@ export default function SavedPosts(props) {
           <button><h2>Saved Post</h2></button>
           <button><h2>Recent Activities</h2></button>
         </div>
-      </section>
+      </section> */}
 
       <RecentActivitiesContentContainer allAddedOpportunities={props.allAddedOpportunities} />
     </div>

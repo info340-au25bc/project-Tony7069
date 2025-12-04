@@ -78,8 +78,8 @@ input[type="password"] {
   font-size: 1.5rem;
 }
 
-/* WELCOME PAGE SECTION */
-.welcome-page {
+/* WELCOME PAGE SECTION */ /* UNDER CONSTRUCTION SECTION */
+.welcome-page, .underconstruction-page {
     width: 100vw;
     height: 100vh;
     background: linear-gradient(135deg, #86ffcf 10%, #8db9ff 30%, #ca90ff 60%, #f58282 100%);
@@ -90,10 +90,14 @@ input[type="password"] {
 }
 
 .welcome-page h1 {
-    font-family: "Inter", sans-serif;;
+    font-family: "Inter", sans-serif;
     font-size: 7rem;
 }
 
+.underconstruction-page h1 {    
+    font-family: "Inter", sans-serif;
+    font-size: 4rem;
+}
 
 /* HOMEPAGE SECTION: */
 .homepage {
@@ -268,13 +272,23 @@ input[type="password"] {
     justify-content: space-between;
 }
 
-.save-btn, .apply-btn {
+.save-btn-blue, .apply-btn {
     border: none;
     padding: 1em 1em;
     border-radius: 0.7rem;
     font-size: 1em;
-    width: 5em;
+    width: 6em;
     background: #1d75ff;
+    color: #ffffff;
+}
+
+.save-btn-gray {
+    border: none;
+    padding: 1em 1em;
+    border-radius: 0.7rem;
+    font-size: 1em;
+    width: 6em;
+    background: rgb(187, 187, 187);
     color: #ffffff;
 }
 
@@ -293,68 +307,87 @@ input[type="password"] {
 }
 
 /* Recent Activities Page */
-.recent-activities-page {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
-.user-info-sidebar {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    background-color: #D9D9D9;
-    /* justify-content: center; */
-    position: fixed;
-    height: 100vh;
-    top: 6.125em; /* maybe change this part later */
-    /* TODO: Navbar currently have media query, 6.125em wont work for that media query, add media query for sidebar! */
-}
-
-.sidebar-buttons-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.sidebar-buttons-container button {
-    background-color: #C7D0AE;
-    border: none;
-    border-radius: 15px;
-    padding: 1em;
-    margin: 1em;
-}
-
-.user-image {
-    padding: 2em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.user-image p {
-    padding: 1em;
-    background-color: lightpink;
-    border-radius: 50%;
-}
-
+/* Container */
 .recent-activities-content-container {
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: "Inter", sans-serif;
     display: flex;
     flex-direction: column;
-    flex: 1;
-    margin-left: 31%;
-    overflow-y: auto;
-}
 
-.recent-activities-content-container div {
-    padding: 2em;
-    margin: 2em;
-    border-radius: 15px;
 }
 
 .recent-activities-content-container h1 {
-    margin-left: 1em;
-    margin-top: 0.5em;
+    margin-bottom: 1rem;
 }
+
+/* Horizontal row of cards */
+.saved-cards-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;        /* allows wrapping when screen gets small */
+    gap: 1.5rem;            /* spacing between cards */
+    justify-content: center;
+}
+
+.saved-card {
+    width: 35rem;
+    background: white;
+    border: 0.1rem solid #ddd;
+    border-radius: 0.8rem;
+    padding: 1rem 1.2rem;
+}
+
+
+.saved-card-content {
+    width: 100%;
+}
+
+.saved-title {
+    margin: 0 0 0.6rem 0;
+    font-size: 1.4rem;
+}
+
+.saved-meta {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+}
+
+.saved-description {
+    margin: 0.6rem 0;
+    font-size: 0.95rem;
+    line-height: 1.3rem;
+}
+
+.saved-tags-wrapper {
+    margin-top: 0.6rem;
+}
+
+.saved-tags {
+    list-style: none;
+    padding: 0;
+    margin: 0.3rem 0 0 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.saved-tags li {
+    background: #efefef;
+    padding: 0.25rem 0.6rem;
+    border-radius: 0.4rem;
+    font-size: 0.8rem;
+}
+
+
+
+
+
+
+
+
+
 
 /* POST PAGES */
 .post {
@@ -688,3 +721,4 @@ input[type="password"] {
     font-size: 1em;
     font-weight: 500;
 }
+
