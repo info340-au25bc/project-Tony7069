@@ -9,6 +9,8 @@ export default function SignupPage(props) {
   const db = getDatabase();
   const reference = ref(db, "Users");
 
+  const [alertMessage, setAlertMessage] = useState('');
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [comfirmPassword, setComfirmPassword] = useState('');
@@ -22,35 +24,35 @@ export default function SignupPage(props) {
     const allUser = Object.values(snapshot.val());
 
     if (email === '') {
-        alert("Please enter a valid email");
+        setAlertMessage("Please enter a valid email.");
         return;
     }
     if (password === '') {
-        alert("Please enter a password");
+        setAlertMessage("Please enter a password.");
         return;
     }
     if (comfirmPassword === '') {
-        alert("Please confirm the password");
+        setAlertMessage("Please confirm the password.");
         return;
     }
     if (firstName === '') {
-        alert("Please enter your first name");
+        setAlertMessage("Please enter your first name.");
         return;
     }
     if (lastName === '') {
-        alert("Please enter your last name");
+        setAlertMessage("Please enter your last name.");
         return;
     }
 
     for (let i = 0; i < allUser.length; i++) {
         if (allUser[i].email === email) {
-            alert("Email already registered. Please use another email.");
+            setAlertMessage("Email already registered. Please use another email.");
             return;
         }
     }
 
     if (comfirmPassword !== password) {
-        alert("Passwords do not match. Please re-enter.");
+        setAlertMessage("Passwords do not match. Please re-enter.");
         return;
     }
 
@@ -85,6 +87,13 @@ export default function SignupPage(props) {
       <div className="input-container">
         <div className="input-container-content">
           <h2>Internshipper</h2>
+
+          {alertMessage && (
+            <div className="alert alert-danger" role="alert">
+              {alertMessage}
+            </div>
+          )}
+
           <form>
             <input type="email" placeholder="email..." required value={email} onChange={(event) => setEmail(event.target.value)}/>
             <div className="firstname-lastname-input-container">

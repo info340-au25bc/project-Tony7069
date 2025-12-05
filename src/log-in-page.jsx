@@ -6,7 +6,7 @@ import { getDatabase, ref, get } from "firebase/database";
 export default function LoginPage(props) {
   const db = getDatabase();
   const reference = ref(db, "Users");
-
+  const [alertMessage, setAlertMessage] = useState('');
 
   const navigate = useNavigate();
 
@@ -15,8 +15,6 @@ export default function LoginPage(props) {
 
   async function handleLogin(event) {
     event.preventDefault();
-    // setEmail(event.target.email.value);
-    // setPassword(event.target.password.value);
     const snapshot = await get(reference);
     const users = Object.values(snapshot.val());
 
@@ -30,7 +28,7 @@ export default function LoginPage(props) {
 
     if (userFound === null) {
       console.log("User not found");
-      alert("User not found");
+      setAlertMessage("User not found");
       setEmail('');
       setPassword('');
       return;
@@ -38,7 +36,7 @@ export default function LoginPage(props) {
 
     if (userFound.password !== password) {
       console.log("Incorrect password");
-      alter("Incorrect password");
+      setAlertMessage("Incorrect password");
       setEmail('');
       setPassword('');
       return;
@@ -62,6 +60,11 @@ export default function LoginPage(props) {
       <div className="input-container">
         <div className="input-container-content">
           <h2>Internshipper</h2>
+          {alertMessage && (
+            <div className="alert alert-danger" role="alert">
+              {alertMessage}
+            </div>
+          )}
           <form>
             <input type="email" placeholder="email..." required value={email} onChange={(event) => setEmail(event.target.value)}/>
             <input type="password" placeholder="password..." required value={password} onChange={(event) => setPassword(event.target.value)}/>

@@ -27,7 +27,6 @@ export default function App() {
 
   function alterCurrentUser(username, userData) { 
     setCurrentUser(username);
-    setEditableUserData(userData);
     console.log(username);
   }
   

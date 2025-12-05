@@ -8,7 +8,7 @@ export function SpecialNav(props) {
         <section className="navbar">
             <div className="homepage-nav-container">
                 <h1>InternShipper</h1>
-                <SearchBar />
+                {/* <SearchBar /> */}
                 <div className="post-home-button">
                     <a>
                     <button onClick={() => navigate("/homepage")}>Home</button>
