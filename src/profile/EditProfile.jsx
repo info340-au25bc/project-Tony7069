@@ -1,34 +1,88 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SpecialNav } from '../Post-Position/SpecialNav.jsx';
+import { getDatabase, ref, get, set as firebaseSet } from 'firebase/database';
+import { useState, useEffect } from 'react';
 
 export default function EditProfile(props) {
   const navigate = useNavigate();
+  const db = getDatabase();
+  const reference = ref(db, "Users");
+  const [userData, setUserData] = useState(null);
+
+  useEffect(() => {
+    get(reference)
+      .then(snapshot => {
+        if (!snapshot.exists()) return;
+        const allUsers = Object.values(snapshot.val());
+        const match = allUsers.find(u => u.username === props.currentUser);
+        setUserData(match || null);
+        console.log("Loaded user in EditProfile:", match);
+      })
+      .catch(err => console.error("Error", err));
+  }, [props.currentUser]);
+
   const [formData, setFormData] = useState({
-    firstName: props.currentUserData.firstName || '',
-    lastName: props.currentUserData.lastName || '',
-    preferredName: props.currentUserData.preferredName || '',
-    region: props.currentUserData.region || '',
-    languages: props.currentUserData.languages || '',
+    firstName: '',
+    lastName: '',
+    preferredName: '',
+    region: '',
+    languages: '',
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
+  useEffect(() => {
+    if (userData) {
+      setFormData({
+        firstName: userData.firstName || 'N/A',
+        lastName: userData.lastName || 'N/A',
+        preferredName: userData.preferredName || 'N/A',
+        region: userData.region || 'N/A',
+        languages: userData.languages || 'N/A',
+      });
+    }
+  }, [userData]);
 
-  const handleSave = (e) => {
-    e.preventDefault();
-    props.onUpdate(formData);
-    navigate('/profile');
-  };
+  function handleChange(event) {
+    const fieldName = event.target.name;
+    const fieldValue = event.target.value;
+    setFormData(previousState => {
+      return {...previousState, [fieldName]: fieldValue};
+    });
+  }
 
-  const handleCancel = () => {
+  function handleSave(event) {
+    event.preventDefault();
+    get(reference)
+      .then(snapshot => {
+        const usersArray = snapshot.val();
+        const updatedUsers = usersArray.map(user => {
+          if (user.username === props.currentUser) {
+            return {
+              ...user,
+              firstName: formData.firstName,
+              lastName: formData.lastName,
+              preferredName: formData.preferredName,
+              region: formData.region,
+              languages: formData.languages
+            };
+          }
+          return user;
+        });
+        return firebaseSet(reference, updatedUsers);
+      })
+      .then(() => {
+        console.log("User profile updated successfully!!!");
+        navigate('/profile');
+      })
+      .catch(err => {
+        console.error("Error:", err);
+      });
+  }
+
+
+  function handleCancel() {
     navigate('/profile');
-  };
+  }
 
   return (
     <div className="profile-page">

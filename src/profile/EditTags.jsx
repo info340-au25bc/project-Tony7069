@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SpecialNav } from '../Post-Position/SpecialNav.jsx';
 
+// This page is not one of the 2.5 functions! we will consider improve and implement this after this quarter, thanks
 export default function EditTags(props) {
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({
-    userTags: props.currentUserData?.userTags || '',
-  });
+  const [formData, setFormData] = useState({"userTags": ''});
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,8 +17,7 @@ export default function EditTags(props) {
 
   const handleSave = (e) => {
     e.preventDefault();
-    props.onUpdate(formData);
-    navigate('/profile');
+    navigate('/underconstruction');
   };
 
   const handleCancel = () => {

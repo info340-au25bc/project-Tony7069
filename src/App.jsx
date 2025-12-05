@@ -23,33 +23,13 @@ import { getDatabase, ref, get } from 'firebase/database';
 
 export default function App() {
 
-  // const [allAddedOpportunities, setAllAddedOpportunities] = useState([]);
   const [currentUser, setCurrentUser] = useState(''); 
 
-  // const [currentUserData, setCurrentUserData] = useState(null);
-  const [editableUserData, setEditableUserData] = useState(null);
   function alterCurrentUser(username, userData) { 
     setCurrentUser(username);
-    // setCurrentUserData(userData); 
     setEditableUserData(userData);
     console.log(username);
   }
-
-  function updateUserData(updatedFields) {
-    const updated = { ...editableUserData, ...updatedFields };
-    setEditableUserData(updated);
-  }
-  
-  // function addToList(newOpportunity) {
-  //   setAllAddedOpportunities(beforeUpdate => [...beforeUpdate, newOpportunity]);
-  // }
-
-  // const db = getDatabase();
-  // const testing = ref(db, "testing");
-  // get(testing)
-  //   .then((snapshot) => {
-  //     console.log(snapshot.val());
-  //   });
   
   return (
     <>
@@ -61,9 +41,9 @@ export default function App() {
         <Route path="/welcome" element={<Welcome username={currentUser} />} />
         <Route path="/require-login" element={<RequireLogin />} />
         <Route path="/info" element={<InfoPage />} />
-        <Route path="/profile" element={<Profile currentUserData={editableUserData} onUpdate={updateUserData} />} />
-        <Route path="/edit-profile" element={<EditProfile currentUserData={editableUserData} onUpdate={updateUserData} />} />
-        <Route path="/edit-tags" element={<EditTags currentUserData={editableUserData} onUpdate={updateUserData} />} />
+        <Route path="/profile" element={<Profile currentUser={currentUser} />} />
+        <Route path="/edit-profile" element={<EditProfile currentUser={currentUser} />} />
+        <Route path="/edit-tags" element={<EditTags currentUser={currentUser} />} />
         <Route path="/saved-posts" element={<SavedPosts user={currentUser}/>} />
         <Route path="/underconstruction" element={<UnderConstruction />} />
         <Route path="/signup" element={<SignupPage />} />
@@ -75,5 +55,3 @@ export default function App() {
     </>
   );
 }
-
-// Test
