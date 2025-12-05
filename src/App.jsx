@@ -49,7 +49,7 @@ export default function App() {
       </Routes>
 
       <footer>
-        <p>Copy right: ... Contact Info: ... </p>
+        <p>© 2025 Internshipper — Built by Tony Li & Thomas Gustafson</p>
       </footer>
     </>
   );

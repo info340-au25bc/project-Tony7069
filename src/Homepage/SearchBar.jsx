@@ -1,7 +1,5 @@
 import { useNavigate } from "react-router-dom";
-
 import { getDatabase, ref, set } from "firebase/database";
-
 
 export function SearchBar(props) {
     const navigate = useNavigate();
