@@ -5,7 +5,8 @@ import { SpecialNav } from '../Post-Position/SpecialNav.jsx';
 // This page is not one of the 2.5 functions! we will consider improve and implement this after this quarter, thanks
 export default function EditTags(props) {
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({"userTags": ''});
+  const [formData, setFormData] = useState({ userTags: '' });
+  const [alertMessage, setAlertMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -17,7 +18,7 @@ export default function EditTags(props) {
 
   const handleSave = (e) => {
     e.preventDefault();
-    navigate('/underconstruction');
+    setAlertMessage("This function is under construction! Click Cancel to go back please");
   };
 
   const handleCancel = () => {
@@ -41,21 +42,22 @@ export default function EditTags(props) {
           <form className="edit-profile-form" onSubmit={handleSave}>
             <div className="form-group">
               <label htmlFor="userTags">Tags</label>
-              <input
-                id="userTags"
-                type="text"
-                name="userTags"
-                value={formData.userTags}
-                onChange={handleChange}
-                placeholder="Enter tags"
-              />
+              <input type="text" name="userTags" value={formData.userTags} onChange={handleChange} placeholder="Enter tags" />
             </div>
 
             <div className="edit-profile-buttons">
               <button type="submit" className="profile-save-btn">Save Changes</button>
-              <button type="button" className="cancel-btn" onClick={handleCancel}>Cancel</button>
+              <button type="button" className="cancel-btn" onClick={handleCancel}>
+                Cancel
+              </button>
             </div>
           </form>
+
+          {alertMessage && (
+            <div className="alert alert-danger" role="alert">
+              {alertMessage}
+            </div>
+          )}
         </div>
       </section>
     </div>

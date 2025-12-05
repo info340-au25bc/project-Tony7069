@@ -1,20 +1,41 @@
 import { SpecialNav } from "./Post-Position/SpecialNav";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { getDatabase, ref, get } from "firebase/database";
 
 export function InfoPage(props) {
-    const { state } = useLocation();
+    const db = getDatabase();
+    const reference = ref(db, "Opportunities");
+    const { position } = useParams();
+    const decodedPositionTitle = decodeURIComponent(position);
 
+    // console.log(position);
+    
+    const [opportunity, setOpportunity] = useState(null);
+    useEffect(() => {
+        async function fetchData() {
+            const snapshot = await get(reference);
+            const raw = snapshot.val();
+            const arrayData = Object.values(raw);
+
+            const found = arrayData.find(
+                (opp) => opp.position === decodedPositionTitle
+            );
+
+            setOpportunity(found);
+        }
+        fetchData();
+    }, [decodedPositionTitle]);
+    if (!opportunity) return null;
     return (
         <div className="info-page">
             <SpecialNav />
-
             <div className="info-main-section">
-                <MainContent detail={state}    />
-                <img src={state.img} alt="photo demonstration of working environment" />
+                <MainContent detail={opportunity}    />
+                <img src={opportunity.img} alt="photo demonstration of working environment, AI generated!!!" />
             </div>
         </div>
     )
-
 }
 
 function MainContent({detail}) {

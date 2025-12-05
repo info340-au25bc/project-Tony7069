@@ -1,4 +1,4 @@
-// This JSON is AI generated. This JSON will be used solely for testing
+// This JSON is AI generated, and is identical with the data on firebase. This JSON will be used solely for testing
 import opportunities from "../data/opportunities.json";
 
 import { useState, useEffect } from "react";
@@ -21,7 +21,8 @@ function CardContainer(props) {
     const reference = ref(db, "Opportunities");
 
     function handleClick(opportunity) {
-        navigate("/info", {state: opportunity});
+        const encodedPosition = encodeURIComponent(opportunity.position);
+        navigate(`/info/${encodedPosition}`);
     }
 
     const [combinedOpportunities, setCombinedOpportunities] = useState([]);
@@ -80,25 +81,38 @@ function CardContainer(props) {
         // FOr save button functionailty
         const saved = opportunity.saved === "true";
         let colorOfButton = "save-btn-blue";
-        let buttonLabel = "Saved";
+        let buttonLabel = "Save";
         if (saved) {
-            buttonLabel = "Unsaved";
+            buttonLabel = "Unsave";
             colorOfButton = "save-btn-gray";
         }
 
         function handleSaved() {
-            const newArray = [...combinedOpportunities];
-            if (newArray[index].saved === "true") {
-                newArray[index].saved = "false";
-            } else {
-                newArray[index].saved = "true";
-            }
+            const newArray = combinedOpportunities.map((opp) => {
+                if (opp.position !== opportunity.position) {
+                    return opp;
+                } else {
+                    const updated = { ...opp };
+                    if (updated.saved === "true") {
+                        updated.saved = "false";
+                    } else {
+                        updated.saved = "true";
+                    }
+                    return updated;
+                }
+            });
             firebaseSet(reference, newArray);
+        }
+
+        let instruction = null;
+        if (index === 0) {
+            instruction = <p>Click on the cards' header for more detail!</p>;
         }
 
         return (
             <div key={index} className="intern-card">
                 <div className="card-header" style={colorStyle} onClick={() => handleClick(opportunity)}>
+                    
                     <div className="logo-circle">{firstLetter}</div>
                 </div>
                 <div className="card-body">
@@ -115,6 +129,7 @@ function CardContainer(props) {
                         <button className={colorOfButton} type="button" onClick={handleSaved}>
                             {buttonLabel}
                         </button>
+                        {instruction}
                         <a href={officalURL} target="_blank" rel="noopener noreferrer">
                             <button className="apply-btn">Apply</button>
                         </a>

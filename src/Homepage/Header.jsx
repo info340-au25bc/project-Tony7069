@@ -64,7 +64,7 @@ function ButtonHamburger(props) {
                 onClick={handleClick}
                 size="small"
                 sx={{
-                    color: "black",
+                    color: "white",
                     bgcolor: "#526af5ff",
                     borderRadius: "0.7rem",
                     "&:hover": { 
@@ -109,7 +109,7 @@ function ButtonHamburger(props) {
 
 function SwitchButton(props) {
     return (
-        <button onClick={props.handleSwitch}>
+        <button className="switch-button" onClick={props.handleSwitch}>
             {props.switchButtonDisplay}
         </button>
     )

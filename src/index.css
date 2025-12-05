@@ -143,6 +143,15 @@ input[type="password"] {
     border-radius: 15px;
 }
 
+.switch-button:hover {
+    background-color: white;
+    font-color: black;
+}
+
+.switch-button {
+    size: 3rem;
+}
+
 @media (min-width: 1200px) {
     .homepage-nav-container {
         display: flex;

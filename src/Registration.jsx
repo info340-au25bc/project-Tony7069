@@ -105,7 +105,7 @@ export default function SignupPage(props) {
             <div className="login-page-buttons">
               <button type="button" className="login" onClick={handleSignup}>Sign Up</button>
               <button type="button" className="login" onClick={() => navigate("/")}>Back</button>
-              <button type="button" className="signup" onClick={() => alert("This function is under construction")}>Need Assistant</button>
+              <button type="button" className="signup" onClick={() => setAlertMessage("This function is underconstruction!")}>Need Assistant</button>
             </div>
           </form>
         </div>

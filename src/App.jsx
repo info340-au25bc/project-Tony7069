@@ -39,7 +39,7 @@ export default function App() {
         <Route index element={<LoginPage alterCurrentUser={alterCurrentUser}/>} />
         <Route path="/welcome" element={<Welcome username={currentUser} />} />
         <Route path="/require-login" element={<RequireLogin />} />
-        <Route path="/info" element={<InfoPage />} />
+        <Route path="/info/:position" element={<InfoPage />} />
         <Route path="/profile" element={<Profile currentUser={currentUser} />} />
         <Route path="/edit-profile" element={<EditProfile currentUser={currentUser} />} />
         <Route path="/edit-tags" element={<EditTags currentUser={currentUser} />} />
