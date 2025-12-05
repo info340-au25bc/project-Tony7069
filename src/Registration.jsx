@@ -71,14 +71,16 @@ export default function SignupPage(props) {
     navigate("/");
   }
 
+
+  // Ignore some of the classname below, especially the buttons, they are just for convinence styling
   return (
     <div className="login-signup">
       {/* This is for fun */}
-      {/* <div className='video-background'>
+      <div className='video-background'>
         <video autoPlay muted loop playsInline>
           <source src="/DiscoveryPark.mp4" type="video/mp4" />
         </video>
-      </div> */}
+      </div>
 
       <div className="input-container">
         <div className="input-container-content">
@@ -93,7 +95,8 @@ export default function SignupPage(props) {
             <input type="password" placeholder="comfirm password..." required value={comfirmPassword} onChange={(event) => setComfirmPassword(event.target.value)}/>
             <div className="login-page-buttons">
               <button type="button" className="login" onClick={handleSignup}>Sign Up</button>
-              <button type="button" className="signup">Need Assistant</button>
+              <button type="button" className="login" onClick={() => navigate("/")}>Back</button>
+              <button type="button" className="signup" onClick={() => alert("This function is under construction")}>Need Assistant</button>
             </div>
           </form>
         </div>

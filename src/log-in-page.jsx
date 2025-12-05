@@ -53,11 +53,11 @@ export default function LoginPage(props) {
   return (
     <div className="login-signup">
       {/* This is for fun */}
-      {/* <div className='video-background'>
+      <div className='video-background'>
         <video autoPlay muted loop playsInline>
           <source src="/DiscoveryPark.mp4" type="video/mp4" />
         </video>
-      </div> */}
+      </div>
 
       <div className="input-container">
         <div className="input-container-content">
@@ -68,7 +68,7 @@ export default function LoginPage(props) {
 
             <div className="login-page-buttons">
               <button type="button" className="login" onClick={handleLogin}>Log In</button>
-              <button type="button" className="signup">Sign Up</button>
+              <button type="button" className="signup" onClick={() => navigate("/signup")}>Sign Up</button>
             </div>
           </form>
         </div>

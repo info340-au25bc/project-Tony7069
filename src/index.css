@@ -12,7 +12,7 @@ html, body { /* do not remove the body, homepage layout needs it !!! */
 .login-signup {
   font-family: 'Georgia', sans-serif;
   /* background-color: #c2b9b9; */
-  background: linear-gradient(135deg, #86ffcf 10%, #8db9ff 30%, #ca90ff 60%, #f58282 100%);
+  /* background: linear-gradient(135deg, #86ffcf 10%, #8db9ff 30%, #ca90ff 60%, #f58282 100%); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +27,7 @@ html, body { /* do not remove the body, homepage layout needs it !!! */
   border-radius: 15px;
   text-align: center;
 
-  opacity: 0.80;
+  opacity: 0.98;
 }
 
 .input-container-content h2 {
@@ -35,7 +35,7 @@ html, body { /* do not remove the body, homepage layout needs it !!! */
 }
 
 /* This is for fun */
-/* .video-background {
+.video-background {
   position: fixed;
   inset: 0;
   z-index: -1;
@@ -46,7 +46,7 @@ html, body { /* do not remove the body, homepage layout needs it !!! */
   width: 100%;
   height: 100%;
   object-fit: cover;
-} */
+}
 
 input[type="email"],
 input[type="password"] {
