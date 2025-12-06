@@ -24,15 +24,6 @@ export function Header(props) {
     )
 }
 
-// function ButtonAdd(props) {
-//     const navigate = useNavigate();
-//     return (
-//         <button onClick={() => navigate("/create-post")}>
-//             Add
-//         </button>
-//     )
-// }
-
 // All tools in this section are not tought in class. All tools in this seciton are learned from https://mui.com/material-ui/getting-started/
 // AI was NOT used to write or help to write this section
 function ButtonHamburger(props) {

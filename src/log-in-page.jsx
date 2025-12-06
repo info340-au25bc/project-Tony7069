@@ -50,10 +50,10 @@ export default function LoginPage(props) {
 
   return (
     <div className="login-signup">
-      {/* This is for fun */}
+
       <div className='video-background'>
         <video autoPlay muted loop playsInline>
-          <source src="/DiscoveryPark.mp4" type="video/mp4" />
+          <source src="/DiscoveryPark.mp4" type="video/mp4" alt="video background"/>
         </video>
       </div>
 

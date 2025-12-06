@@ -77,10 +77,9 @@ export default function SignupPage(props) {
   // Ignore some of the classname below, especially the buttons, they are just for convinence styling
   return (
     <div className="login-signup">
-      {/* This is for fun */}
       <div className='video-background'>
         <video autoPlay muted loop playsInline>
-          <source src="/DiscoveryPark.mp4" type="video/mp4" />
+          <source src="/DiscoveryPark.mp4" type="video/mp4" alt="video background"/>
         </video>
       </div>
 

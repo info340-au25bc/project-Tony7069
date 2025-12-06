@@ -572,7 +572,7 @@ input[type="password"] {
 
 /* PROFILE PAGE */
 .profile-page {
-  background-color: #e7e7ff; /* Maybe use this color us backgrond color of all pages? */
+  background-color: #e7e7ff; /* Maybe use this color as backgrond color of all pages? */
   min-height: 100vh;
 }
 
@@ -771,7 +771,6 @@ input[type="password"] {
   margin-top: 1.25rem;
 }
 
-/* Save button */
 .profile-save-btn {
   background-color: blue ;
   color: white;
@@ -780,7 +779,6 @@ input[type="password"] {
   font-size: 1rem;
 }
 
-/* Cancel button */
 .cancel-btn {
   background-color: white;
   border: 1px solid;
@@ -789,7 +787,7 @@ input[type="password"] {
   font-size: 1rem;
 }
 
-/* For this following section til end of this document, AI was used to help grouping classes with same attributes together, 
+/* For this following section til the end of this document, AI was used to help grouping classes with same attributes together, 
    and to group all media queries into one big media query, in order to make it looks more clean.
 
    AI was NOT used to write (create) any part of these codes NOR used to fix any bug */
@@ -1039,37 +1037,5 @@ input[type="password"] {
 
   .alert {
     font-size: 0.9rem;
-  }
-}
-
-/* EVEN SMALLER SCREENS (VERY NARROW, <= 480px) */
-@media (max-width: 480px) {
-
-  .homepage-nav-container h1 {
-    font-size: 1.4rem;
-  }
-
-  .intern-card {
-    max-width: 20rem;
-  }
-
-  .info-job-title {
-    font-size: 1.4em;
-  }
-
-  .welcome-page h1 {
-    font-size: 2.4rem;
-  }
-
-  .underconstruction-page h1 {
-    font-size: 2rem;
-  }
-
-  .profile-page-content {
-    padding: 0.75rem;
-  }
-
-  .saved-card {
-    padding: 0.8rem;
   }
 }
