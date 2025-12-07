@@ -55,7 +55,7 @@ export default function EditProfile(props) {
     get(reference)
       .then(snapshot => {
         const usersArray = snapshot.val();
-        const updatedUsers = usersArray.map(user => {
+        const updatedUsers = Object.values(usersArray).map(user => {
           if (user.username === props.currentUser) {
             return {
               ...user,
