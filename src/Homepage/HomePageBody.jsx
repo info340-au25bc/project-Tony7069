@@ -27,11 +27,13 @@ function CardContainer(props) {
 
     const [combinedOpportunities, setCombinedOpportunities] = useState([]);
     useEffect(() => {
-
+        // keep firebase keys so we can update a single post
         const forCleanup = onValue(reference, snapshot => {
-            const objectData = snapshot.val();
-
-            const arrayData = Object.values(objectData);
+            const objectData = snapshot.val() || {};
+            const arrayData = Object.entries(objectData).map(([id, value]) => {
+                const saved = value && (value.saved === true || value.saved === "true");
+                return { id, ...value, saved }; // normalize saved to boolean
+            });
             setCombinedOpportunities(arrayData);
         });
         return () => forCleanup();
@@ -78,8 +80,8 @@ function CardContainer(props) {
         const firstLetter = companyName.charAt(0).toUpperCase();
         const colorStyle = colorCombiner(index);
 
-        // FOr save button functionailty
-        const saved = opportunity.saved === "true";
+        // For save button functionality (saved is normalized boolean)
+        const saved = opportunity.saved === true;
         let colorOfButton = "save-btn-blue";
         let buttonLabel = "Save";
         if (saved) {
@@ -88,20 +90,13 @@ function CardContainer(props) {
         }
 
         function handleSaved() {
-            const newArray = combinedOpportunities.map((opp) => {
-                if (opp.position !== opportunity.position) {
-                    return opp;
-                } else {
-                    const updated = { ...opp };
-                    if (updated.saved === "true") {
-                        updated.saved = "false";
-                    } else {
-                        updated.saved = "true";
-                    }
-                    return updated;
-                }
-            });
-            firebaseSet(reference, newArray);
+            // update only this post using its firebase id
+            const nextSaved = !saved;
+            const targetRef = ref(db, `Opportunities/${opportunity.id}`);
+            const { id, ...rest } = opportunity;
+            // optimistic UI update
+            setCombinedOpportunities(prev => prev.map(o => o.id === id ? { ...o, saved: nextSaved } : o));
+            firebaseSet(targetRef, { ...rest, saved: nextSaved });
         }
 
         let instruction = null;

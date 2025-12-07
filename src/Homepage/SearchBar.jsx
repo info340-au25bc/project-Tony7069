@@ -4,7 +4,7 @@ import { getDatabase, ref, set } from "firebase/database";
 export function SearchBar(props) {
     const navigate = useNavigate();
 
-    function handleSearch() {
+    function handleSearch(event) {
         navigate("/homepage");
         props.search(event.target.value);
     }

@@ -10,22 +10,25 @@ export function RecentActivitiesContentContainer(props) {
     useEffect(() => {
         const db = getDatabase();
         const reference = ref(db, "Opportunities");
+        // guard empty database and keep ids for consistency
         const forCleanup = onValue(reference, snapshot => {
-            const objectData = snapshot.val();
-
-            const arrayData = Object.values(objectData);
+            const objectData = snapshot.val() || {};
+            const arrayData = Object.entries(objectData).map(([id, value]) => {
+                const saved = value && (value.saved === true || value.saved === "true");
+                return { id, ...value, saved }; // normalize saved to boolean
+            });
             setCombinedOpportunities(arrayData);
         });
         return () => forCleanup();
     }, []);
 
     const savedOpportunities = combinedOpportunities.filter(opportunity => {
-        if (opportunity.saved === "true") return true;
-        return false;
+        return opportunity.saved === true; // saved is normalized boolean
     });
 
     const allOpportunities = savedOpportunities.map((opportunity, index) => {
-        const {position, location, description, tags} = opportunity;
+        const {position, location, description} = opportunity;
+        const tags = opportunity.tags || [];
         const basePay = opportunity["base-pay"];
         const contactInfo = opportunity["contact-info"];
         const allTags = tags.map((tag, innerIndex) => {
