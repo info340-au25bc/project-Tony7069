@@ -14,7 +14,6 @@ export default function HomePageBody(props) {
     );
 }
 
-//modified to include search functionality and improved filtering
 function CardContainer(props) {
     const navigate = useNavigate();
     const db = getDatabase();
@@ -27,13 +26,11 @@ function CardContainer(props) {
 
     const [combinedOpportunities, setCombinedOpportunities] = useState([]);
     useEffect(() => {
-        // keep firebase keys so we can update a single post
+
         const forCleanup = onValue(reference, snapshot => {
-            const objectData = snapshot.val() || {};
-            const arrayData = Object.entries(objectData).map(([id, value]) => {
-                const saved = value && (value.saved === true || value.saved === "true");
-                return { id, ...value, saved }; // normalize saved to boolean
-            });
+            const objectData = snapshot.val();
+
+            const arrayData = Object.values(objectData);
             setCombinedOpportunities(arrayData);
         });
         return () => forCleanup();
@@ -70,8 +67,6 @@ function CardContainer(props) {
         const {position, location, description, tags, officalURL} = opportunity;
         const basePay = opportunity["base-pay"];
         const contactInfo = opportunity["contact-info"];
-        // const img = opportunity["img"];
-        // const officalURL = opportunity["officalURL"];
         const allTags = (tags || []).map((tag, innerIndex) => {
             return <span key={innerIndex}>{ tag }</span>
         });
@@ -80,8 +75,7 @@ function CardContainer(props) {
         const firstLetter = companyName.charAt(0).toUpperCase();
         const colorStyle = colorCombiner(index);
 
-        // For save button functionality (saved is normalized boolean)
-        const saved = opportunity.saved === true;
+        const saved = opportunity.saved === "true";
         let colorOfButton = "save-btn-blue";
         let buttonLabel = "Save";
         if (saved) {
@@ -90,13 +84,20 @@ function CardContainer(props) {
         }
 
         function handleSaved() {
-            // update only this post using its firebase id
-            const nextSaved = !saved;
-            const targetRef = ref(db, `Opportunities/${opportunity.id}`);
-            const { id, ...rest } = opportunity;
-            // optimistic UI update
-            setCombinedOpportunities(prev => prev.map(o => o.id === id ? { ...o, saved: nextSaved } : o));
-            firebaseSet(targetRef, { ...rest, saved: nextSaved });
+            const newArray = combinedOpportunities.map((opp) => {
+                if (opp.position !== opportunity.position) {
+                    return opp;
+                } else {
+                    const updated = { ...opp };
+                    if (updated.saved === "true") {
+                        updated.saved = "false";
+                    } else {
+                        updated.saved = "true";
+                    }
+                    return updated;
+                }
+            });
+            firebaseSet(reference, newArray);
         }
 
         let instruction = null;

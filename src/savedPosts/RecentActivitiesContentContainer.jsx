@@ -5,30 +5,26 @@ import { useState, useEffect } from "react";
 
 
 export function RecentActivitiesContentContainer(props) {
-    // TODO: this part could be refactor: 
     const [combinedOpportunities, setCombinedOpportunities] = useState([]);
     useEffect(() => {
         const db = getDatabase();
         const reference = ref(db, "Opportunities");
-        // guard empty database and keep ids for consistency
         const forCleanup = onValue(reference, snapshot => {
-            const objectData = snapshot.val() || {};
-            const arrayData = Object.entries(objectData).map(([id, value]) => {
-                const saved = value && (value.saved === true || value.saved === "true");
-                return { id, ...value, saved }; // normalize saved to boolean
-            });
+            const objectData = snapshot.val();
+
+            const arrayData = Object.values(objectData);
             setCombinedOpportunities(arrayData);
         });
         return () => forCleanup();
     }, []);
 
     const savedOpportunities = combinedOpportunities.filter(opportunity => {
-        return opportunity.saved === true; // saved is normalized boolean
+        if (opportunity.saved === "true") return true;
+        return false;
     });
 
     const allOpportunities = savedOpportunities.map((opportunity, index) => {
-        const {position, location, description} = opportunity;
-        const tags = opportunity.tags || [];
+        const {position, location, description, tags} = opportunity;
         const basePay = opportunity["base-pay"];
         const contactInfo = opportunity["contact-info"];
         const allTags = tags.map((tag, innerIndex) => {
