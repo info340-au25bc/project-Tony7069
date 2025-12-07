@@ -23,7 +23,6 @@ export default function Homepage(props) {
     }
 
     // console.log("app" + props.currentUser);
-
     return (
         <div className="homepage">
             <Header currentUser={props.currentUser} search={search} filterOrSearch={filterOrSearch} handleSwitch={handleSwitch} switchButtonDisplay={switchButtonDisplay}/>

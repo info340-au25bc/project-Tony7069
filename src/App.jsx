@@ -34,6 +34,7 @@ export default function App() {
     <>
       <Routes>
         <Route path="/homepage" element={<Homepage currentUser={currentUser} />} />
+        <Route path="*" element={<Homepage currentUser={currentUser} />} />
         <Route path="/create-post" element={<EmptyPost />} />
         <Route path="/position" element={<PostPosition />} />
         <Route index element={<LoginPage alterCurrentUser={alterCurrentUser}/>} />
