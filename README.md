@@ -1,16 +1,28 @@
 # React + Vite
+Intern Opportunities Forum
+1. What and Why
+Going for an internship is an important experience for college students, but unfortunately being accepted into an internship opportunity can be hard. Sometimes, the hardship begins with searching for information. What students often do is to look for opportunities on search engine such as Google or Bing, or on hiring apps such as LinkedIn and Handshake, finding the information listed chaotically and structured differently, making it hard for students to understand the requirements and apply to that position.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An information technology problem in this space that we are working to address would be the amount of high amount of work and difficulty it takes to secure an internship. Most apps or websites that exist require subscriptions and do not offer unique opportunites, directing thousands of users to a singular position with no chance of success. With this app we aim to match users to unique opportunities suited to their skills and experiences, and provide a useful interface for employers to connect with potential employees.
 
-Currently, two official plugins are available:
+Applications such as LinkedIn, Handshake, and Glassdoor had been on the web for a long time, and they are useful in many aspects such as providing a platform for employee and employer to communicate. However, as a LinkedIn and Handshake user and as a college student myself, these platforms are not that friendly for students who are new to the industry. Intern opportunities on those sites are often restricted and not clearly shown (often doesn't include when, where, requirements, and link to apply).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. Who are the users of the application?
+College students who are looking for intern opportunities.
 
-## React Compiler
+3. What will the users do with the web app?
+Forum and comment space where user and post request (request for intern info) and answer to other's questions. Searching system that allows user to search for exist intern opportunites in the database based on tag. Save/Like specific intern opportunies. Allows users to upload new intern opportunities.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+4. What kind of information will the users be viewing?
+The users will be interacting with the user interface to add and manipulate data. All data the app will show will be entirely user-generated.
 
-## Expanding the ESLint configuration
+5. How will using this app help to solve the problem?
+By using our app, users now can gather all information they need on a single site instead of looking on internet. Our information includes all what users will need to apply to that intern position.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Features:
+1. Searching feature based on keywords in the description or title of internship opportunities
+2. Filtering feature based on tags included in internship opportunities
+3. Add new opportunities feature: Allow users to post their own opportunities, and these new opportunities can be saved, visited, and search/filter
+4. Login/Signup feature: only authorized users can use the platform
+5. Personal Detail modification feature: Built on firebase realtime data, once user logged in, they maybe change their personal information such as language, region, perferred name...
+
